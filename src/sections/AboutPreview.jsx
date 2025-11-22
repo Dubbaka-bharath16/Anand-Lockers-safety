@@ -1,68 +1,60 @@
-import React, { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const AboutPreview = () => {
-  const sectionRef = useRef(null)
-  const isInView = useInView(sectionRef, { once: true, threshold: 0.3 })
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, threshold: 0.3 });
 
-  const films = [
-    {
-      image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1159&q=80",
-      title: "Echoes of Silence",
-      genre: "Drama",
-      year: "2023",
-      description: "A reclusive musician's life is turned upside down when he forms an unlikely bond with a spirited young girl."
-    },
-    {
-      image: "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-      title: "Project Uprising",
-      genre: "Thriller",
-      year: "Coming 2024",
-      description: "Some truths are too dangerous to stay buried. A journalist uncovers a conspiracy that threatens society."
-    },
-    {
-      image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1225&q=80",
-      title: "Shades of Truth",
-      genre: "Mystery",
-      year: "2022",
-      description: "In a small town where everyone has something to hide, a detective must unravel a web of lies."
-    }
-  ]
+  const offerings = [
+  {
+    icon: "💼",
+    label: "Individual & Family Lockers",
+    title: "Secure Storage for Personal Assets",
+    description:
+      "Designed for individuals and families seeking a highly secure space for jewellery, legal papers, financial documents, and essential personal assets."
+  },
+  {
+    icon: "🏢",
+    label: "Corporate & Business Lockers",
+    title: "Confidential Business Asset Protection",
+    description:
+      "Ideal for enterprises that require secure storage for confidential files, backup data, digital media, contracts, and sensitive operational material."
+  },
+  {
+    icon: "🛡️",
+    label: "Short-Term & Priority Access",
+    title: "Flexible High-Security Storage Plans",
+    description:
+      "A tailored solution for customers needing temporary protection during travel, renovations, events, or transitional periods with full-time security."
+  }
+];
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  }
+      transition: { staggerChildren: 0.2 },
+    },
+  };
 
   const itemVariants = {
     hidden: { y: 50, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    }
-  }
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
 
   const cardVariants = {
-    hidden: { scale: 0.9, opacity: 0 },
+    hidden: { scale: 0.95, opacity: 0 },
     visible: {
       scale: 1,
       opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  }
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
 
   return (
     <section ref={sectionRef} className="py-12 md:py-20 bg-white">
@@ -73,96 +65,115 @@ const AboutPreview = () => {
           animate={isInView ? "visible" : "hidden"}
           className="max-w-6xl mx-auto"
         >
-          {/* Section Header */}
+          {/* Header */}
           <motion.div variants={itemVariants} className="text-center mb-12 md:mb-16">
-            <h2 className="text-2xl md:text-4xl font-bold text-blue-800 mb-4 md:mb-6">
-              Featured Films
+            <h2 className="text-2xl md:text-4xl font-bold text-blue-800 mb-4">
+              Locker Solutions at a Glance
             </h2>
-            <div className="w-20 h-1 md:w-24 md:h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 mt-6 max-w-2xl mx-auto px-2 sm:px-4">
-              Discover our latest cinematic creations that showcase our commitment to storytelling excellence
+            <div className="w-16 h-[3px] bg-blue-800 mx-auto rounded-full" />
+            <p className="text-gray-600 text-base sm:text-lg md:text-xl mt-6 max-w-2xl mx-auto">
+              Explore our flexible and secure locker options designed for every type of customer.
             </p>
           </motion.div>
 
-          {/* Films Grid */}
+          {/* Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {films.map((film, index) => (
+            {offerings.map((item, index) => (
               <motion.div
                 key={index}
                 variants={cardVariants}
-                whileHover={{ 
-                  y: -12, 
-                  scale: 1.03,
-                  transition: { duration: 0.3 }
-                }}
+                whileHover={{ y: -8 }}
                 className="group"
               >
-                <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300">
-                  {/* Film Image */}
-                  <div className="h-64 overflow-hidden">
-                    <motion.img 
-                      src={film.image} 
-                      alt={film.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ duration: 0.5 }}
+                <div className="relative h-full bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden transition-all duration-300 group-hover:shadow-xl">
+                  {/* Moving hover overlay – from bottom-left to full card */}
+                  <div className="absolute inset-0 overflow-hidden">
+                    <div
+                      className="
+                        absolute inset-0
+                        bg-blue-800
+                        opacity-0
+                        translate-x-[-100%] translate-y-[100%]
+                        group-hover:opacity-100
+                        group-hover:translate-x-0 group-hover:translate-y-0
+                        transition-all duration-500 ease-out
+                      "
                     />
                   </div>
 
-                  {/* Film Content */}
-                  <div className="p-6">
-                    <motion.h3 
-                      className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300"
-                      whileHover={{ x: 5 }}
+                  {/* Card Content */}
+                  <div className="relative z-10 px-6 py-7 text-center">
+                    {/* Icon */}
+                    <div className="flex justify-center mb-4">
+                      <div
+                        className="
+                          w-14 h-14 rounded-full flex items-center justify-center text-2xl
+                          bg-blue-50
+                          group-hover:bg-white
+                          transition-colors duration-300
+                        "
+                      >
+                        {item.icon}
+                      </div>
+                    </div>
+
+                    {/* Label */}
+                    <p
+                      className="
+                        text-xs font-semibold uppercase tracking-wide mb-2
+                        text-blue-700
+                        group-hover:text-blue-200
+                        transition-colors duration-300
+                      "
                     >
-                      {film.title}
-                    </motion.h3>
-                    
-                    <motion.div 
-                      className="flex justify-between items-center text-sm mb-4"
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      transition={{ duration: 0.4, delay: 0.2 }}
+                      {item.label}
+                    </p>
+
+                    {/* Title */}
+                    <h3
+                      className="
+                        text-lg md:text-xl font-bold mb-2
+                        text-gray-900
+                        group-hover:text-white
+                        transition-colors duration-300
+                      "
                     >
-                      <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                        {film.genre}
-                      </span>
-                      <span className="text-gray-600 font-medium">{film.year}</span>
-                    </motion.div>
-                    
-                    <motion.p 
-                      className="text-gray-700 leading-relaxed text-sm md:text-base"
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      transition={{ duration: 0.4, delay: 0.3 }}
+                      {item.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p
+                      className="
+                        text-sm md:text-base leading-relaxed
+                        text-gray-600
+                        group-hover:text-blue-100
+                        transition-colors duration-300
+                      "
                     >
-                      {film.description}
-                    </motion.p>
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
 
-          {/* CTA Button */}
-          <motion.div 
-            variants={itemVariants}
-            className="text-center mt-12 md:mt-16"
-          >
-            <Link to="/projects" style={{ textDecoration: "none" }}>
-              <motion.button 
+          {/* Single View More button */}
+          <motion.div variants={itemVariants} className="text-center mt-12 md:mt-16">
+            <Link to="/services">
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-base md:text-lg"
+                className="bg-blue-800 text-white px-8 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all text-base"
               >
-                View All Projects
+                View More
               </motion.button>
             </Link>
           </motion.div>
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default AboutPreview
+export default AboutPreview;
