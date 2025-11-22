@@ -13,24 +13,24 @@ const About = () => {
   const isInView2 = useInView(ref2, { once: true, threshold: 0.3 });
   const isInView3 = useInView(ref3, { once: true, threshold: 0.3 });
 
-  const creativeApproach = [
+  const securityFeatures = [
     {
-      icon: '🎭',
-      title: 'Authentic Narratives',
-      description: 'We craft stories that resonate with genuine human emotions and real-life experiences, creating connections that last beyond the screen.',
+      icon: '🔒',
+      title: 'Advanced Security Systems',
+      description: 'State-of-the-art surveillance and access control systems ensuring continuous protection and monitoring of your valuables.',
       accent: 'text-blue-600'
     },
     {
-      icon: '💫',
-      title: 'Creative Innovation',
-      description: 'Embracing new storytelling techniques and technologies to deliver unique perspectives that captivate and inspire audiences.',
+      icon: '📦',
+      title: 'Multiple Size Options',
+      description: 'Private, easy-access lockers available in various sizes to accommodate everything from documents to family heirlooms.',
       accent: 'text-amber-600'
     },
     {
-      icon: '🤝',
-      title: 'Collaborative Spirit',
-      description: 'Bringing together diverse creative talents to build something greater than the sum of its parts through shared vision and expertise.',
-      accent: 'text-purple-600'
+      icon: '🏦',
+      title: 'Bank-Grade Safety',
+      description: 'High-standard protection comparable to traditional bank lockers with enhanced accessibility and convenience.',
+      accent: 'text-green-600'
     }
   ];
 
@@ -38,87 +38,87 @@ const About = () => {
     {
       image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
       name: 'Anand Sharma',
-      role: 'Founder & Creative Director',
-      bio: 'Visionary filmmaker dedicated to creating cinema that inspires social change and emotional connection.'
+      role: 'Founder & Security Director',
+      bio: 'Visionary security expert dedicated to providing reliable protection solutions for valuable assets.'
     },
     {
       image: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
       name: 'Priya Patel',
-      role: 'Head of Production',
-      bio: 'Award-winning producer with exceptional talent for bringing creative visions to life with precision and passion.'
+      role: 'Operations Manager',
+      bio: 'Experienced professional with exceptional talent for ensuring seamless customer experiences and facility management.'
     },
     {
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
       name: 'Rahul Verma',
-      role: 'Cinematography Director',
-      bio: 'Master visual storyteller known for creating breathtaking imagery that enhances narrative depth and emotional impact.'
+      role: 'Security Systems Director',
+      bio: 'Master security specialist known for implementing cutting-edge protection technologies and protocols.'
     }
   ];
 
-  const studioPrinciples = [
+  const companyPrinciples = [
     {
-      icon: '⭐',
-      title: 'Artistic Excellence',
-      description: 'Every frame we create is a testament to our commitment to cinematic artistry. We believe in pushing creative boundaries while maintaining the highest standards of technical precision and emotional authenticity.',
-      bgColor: 'bg-amber-50',
-      borderColor: 'border-amber-200',
-      iconColor: 'text-amber-600'
-    },
-    {
-      icon: '💎',
-      title: 'Creative Integrity',
-      description: 'We stay true to the heart of every story, maintaining artistic vision and ethical standards while creating commercially successful content that resonates with audiences worldwide.',
+      icon: '🛡️',
+      title: 'Uncompromising Security',
+      description: 'Every security measure we implement is designed to provide maximum protection while maintaining ease of access for our valued customers.',
       bgColor: 'bg-blue-50',
       borderColor: 'border-blue-200',
       iconColor: 'text-blue-600'
     },
     {
-      icon: '🌍',
-      title: 'Global Perspective',
-      description: 'Our stories transcend cultural boundaries while celebrating local authenticity. We create content that speaks universal truths while honoring diverse perspectives and experiences.',
-      bgColor: 'bg-purple-50',
-      borderColor: 'border-purple-200',
-      iconColor: 'text-purple-600'
+      icon: '🤝',
+      title: 'Customer Trust',
+      description: 'We build relationships based on transparency, reliability, and the highest ethical standards in asset protection.',
+      bgColor: 'bg-amber-50',
+      borderColor: 'border-amber-200',
+      iconColor: 'text-amber-600'
     },
     {
-      icon: '🚀',
-      title: 'Forward Thinking',
-      description: 'We continuously evolve our craft, embracing emerging technologies and innovative storytelling formats to stay at the forefront of cinematic expression and audience engagement.',
+      icon: '⚡',
+      title: 'Modern Solutions',
+      description: 'Embracing the latest security technologies to provide a hassle-free, confidential experience that meets modern needs.',
       bgColor: 'bg-green-50',
       borderColor: 'border-green-200',
       iconColor: 'text-green-600'
+    },
+    {
+      icon: '🔑',
+      title: 'Easy Access',
+      description: 'Providing convenient access to your valuables while maintaining the highest security standards you expect and deserve.',
+      bgColor: 'bg-purple-50',
+      borderColor: 'border-purple-200',
+      iconColor: 'text-purple-600'
     }
   ];
 
-  const creativeOpportunities = [
+  const lockerServices = [
     {
-      category: 'For Storytellers',
-      opportunities: [
-        'Develop your unique voice with creative mentorship',
-        'Collaborate on diverse genres from drama to documentary',
-        'Access to our network of writers and directors'
+      category: 'For Personal Valuables',
+      items: [
+        'Secure storage for jewelry and precious metals',
+        'Protection for important documents and certificates',
+        'Safe keeping for family heirlooms and collectibles'
       ],
-      icon: '✍️',
+      icon: '💎',
       color: 'text-purple-600',
       bgColor: 'bg-purple-50'
     },
     {
-      category: 'For Visual Artists',
-      opportunities: [
-        'Work with state-of-the-art cinematic equipment',
-        'Experiment with innovative visual storytelling techniques',
-        'Collaborate with award-winning cinematographers'
+      category: 'For Business Assets',
+      items: [
+        'Confidential document storage solutions',
+        'Secure backup media and data protection',
+        'Valuable business equipment and assets'
       ],
-      icon: '🎨',
+      icon: '🏢',
       color: 'text-blue-600',
       bgColor: 'bg-blue-50'
     },
     {
-      category: 'For Emerging Talent',
-      opportunities: [
-        'Hands-on learning through apprentice programs',
-        'Portfolio-building projects with professional guidance',
-        'Networking with industry leaders and festivals'
+      category: 'Specialized Storage',
+      items: [
+        'Seasonal item protection',
+        'Travel document and currency security',
+        'Emergency backup storage solutions'
       ],
       icon: '🌟',
       color: 'text-amber-600',
@@ -166,9 +166,9 @@ const About = () => {
       <section className="relative py-16 md:py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 overflow-hidden mt-16">
         {/* Background Elements */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute -left-24 -top-20 w-72 h-72 bg-orange-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+          <div className="absolute -left-24 -top-20 w-72 h-72 bg-green-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
           <div className="absolute -right-24 -bottom-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-amber-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
         </div>
         
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
@@ -186,18 +186,18 @@ const About = () => {
               className="mb-8 md:mb-10"
             >
               <div className="inline-block bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-8 border border-white/20 shadow-2xl mx-2">
-                <div className="text-2xl sm:text-3xl md:text-5xl font-bold text-yellow-300 mb-4 md:mb-5 font-sans leading-tight">
-                  Anand Cinemaz
+                <div className="text-2xl sm:text-3xl md:text-5xl font-bold text-amber-300 mb-4 md:mb-5 font-sans leading-tight">
+                  Anand Lockers
                 </div>
                 
                 <div className="text-base sm:text-lg md:text-2xl text-blue-100 italic mb-4 md:mb-5">
-                  "Where every frame tells a story"
+                  "Your Trusted Secure Space"
                 </div>
                 
-                <div className="w-16 h-1 bg-gradient-to-r from-yellow-400 to-orange-400 mx-auto rounded-full mb-4 md:mb-5"></div>
+                <div className="w-16 h-1 bg-gradient-to-r from-amber-400 to-green-400 mx-auto rounded-full mb-4 md:mb-5"></div>
                 
                 <div className="text-sm sm:text-base md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed px-2">
-                  Creating cinematic experiences that inspire, educate, and provoke meaningful conversations
+                  Premium security solutions protecting your most valuable possessions with bank-grade safety standards
                 </div>
               </div>
             </motion.div>
@@ -208,7 +208,7 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-xl sm:text-2xl md:text-4xl font-bold mb-4 md:mb-6 text-blue-100"
             >
-              Our <span className="text-orange-300">Creative Story</span>
+              Your <span className="text-amber-300">Secure Solution</span>
             </motion.h1>
 
             <motion.div
@@ -218,8 +218,8 @@ const About = () => {
               className="max-w-4xl mx-auto"
             >
               <p className="text-sm sm:text-base md:text-lg text-blue-100 leading-relaxed px-2 sm:px-4">
-                For years, we've created not just films, but emotional journeys. Our creative process 
-                is guided by the timeless wisdom that authentic stories have the power to transform lives.
+                With bank lockers becoming increasingly difficult to obtain, we provide a reliable alternative 
+                designed with the same level of security, privacy, and trust you expect from traditional banking institutions.
               </p>
             </motion.div>
 
@@ -229,13 +229,13 @@ const About = () => {
               transition={{ duration: 0.8, delay: 1.2 }}
               className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center mt-8 md:mt-12"
             >
-              <Link to='/films'>
+              <Link to='/services'>
                 <motion.button 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-orange-500 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl hover:bg-orange-600 transition-all duration-300 text-sm sm:text-base w-full sm:w-auto"
+                  className="bg-amber-500 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl hover:bg-amber-600 transition-all duration-300 text-sm sm:text-base w-full sm:w-auto"
                 >
-                  Explore Our Work
+                  View Our Services
                 </motion.button>
               </Link>
               <Link to='/contact'>
@@ -244,7 +244,7 @@ const About = () => {
                   whileTap={{ scale: 0.95 }}
                   className="border-2 border-white text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-800 transition-all duration-300 text-sm sm:text-base w-full sm:w-auto"
                 >
-                  Join Our Creative Family
+                  Book a Locker
                 </motion.button>
               </Link>
             </motion.div>
@@ -267,10 +267,10 @@ const About = () => {
                 className="flex justify-center w-full lg:justify-start order-2 lg:order-1"
               >
                 <div className="relative group w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto">
-                  <div className="w-full h-[350px] sm:h-[400px] md:h-[500px] lg:h-[580px] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-100 bg-white transform transition-all duration-500 group-hover:shadow-3xl group-hover:scale-[1.02] group-hover:ring-2 group-hover:ring-orange-200">
+                  <div className="w-full h-[350px] sm:h-[400px] md:h-[500px] lg:h-[580px] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-100 bg-white transform transition-all duration-500 group-hover:shadow-3xl group-hover:scale-[1.02] group-hover:ring-2 group-hover:ring-amber-200">
                     <img
                       src="./images/CEO.png"
-                      alt="Founder & Creative Director"
+                      alt="Founder & Security Director"
                       className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     />
                     
@@ -283,9 +283,9 @@ const About = () => {
                       viewport={{ once: true }}
                       className="absolute left-4 md:left-6 bottom-4 md:bottom-6 transform group-hover:scale-110 transition-transform duration-300"
                     >
-                      <div className="bg-white/95 backdrop-blur-sm px-3 md:px-4 py-1 md:py-2 rounded-full shadow-lg text-xs md:text-sm font-semibold text-gray-700 border border-gray-100 group-hover:border-orange-200 group-hover:shadow-xl transition-all duration-300">
-                        <div className="text-xs text-gray-500 group-hover:text-orange-500 transition-colors">Founder & Creative Director</div>
-                        <div className="uppercase text-xs tracking-wide group-hover:text-blue-600 transition-colors">ANAND CINEMAZ</div>
+                      <div className="bg-white/95 backdrop-blur-sm px-3 md:px-4 py-1 md:py-2 rounded-full shadow-lg text-xs md:text-sm font-semibold text-gray-700 border border-gray-100 group-hover:border-amber-200 group-hover:shadow-xl transition-all duration-300">
+                        <div className="text-xs text-gray-500 group-hover:text-amber-500 transition-colors">Founder & Security Director</div>
+                        <div className="uppercase text-xs tracking-wide group-hover:text-blue-600 transition-colors">ANAND LOCKERS</div>
                       </div>
                     </motion.div>
                   </div>
@@ -297,12 +297,11 @@ const About = () => {
                     viewport={{ once: true }}
                     className="mt-6 group"
                   >
-                    <div className="bg-gradient-to-r from-blue-50/50 to-orange-50/50 rounded-xl p-4 md:p-6 border-l-4 border-orange-500 shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:border-orange-600 mx-2 sm:mx-0">
+                    <div className="bg-gradient-to-r from-blue-50/50 to-amber-50/50 rounded-xl p-4 md:p-6 border-l-4 border-amber-500 shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:border-amber-600 mx-2 sm:mx-0">
                       <p className="text-gray-700 italic text-sm sm:text-base md:text-lg leading-relaxed text-center">
-                        "We transform stories into cinematic legacies. Every film we create is backed by 
-                        complete creative integrity, artistic excellence, and a vision for meaningful 
-                        storytelling. Our productions aren't just entertainment; they're emotional 
-                        journeys that resonate for generations to come."
+                        "We provide peace of mind through secure, modern locker solutions. In today's world where 
+                        bank lockers are increasingly scarce, we offer a reliable alternative that combines 
+                        bank-grade security with unparalleled convenience and accessibility."
                       </p>
                     </div>
                   </motion.div>
@@ -319,27 +318,26 @@ const About = () => {
               >
                 <div className="w-full">
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 text-center lg:text-left">Anand</h2>
-                  <p className="text-base sm:text-lg md:text-xl text-orange-500 font-semibold mt-1 text-center lg:text-left">Founder & Creative Director</p>
+                  <p className="text-base sm:text-lg md:text-xl text-amber-500 font-semibold mt-1 text-center lg:text-left">Founder & Security Director</p>
 
                   <div className="mt-4 md:mt-6 text-gray-700 space-y-4 w-full p-3">
                     <p className="text-sm sm:text-base md:text-lg leading-relaxed">
-                      A visionary leader with an unwavering commitment to cinematic excellence, Anand founded
-                      Anand Cinemaz with a simple yet powerful vision: to create meaningful films that 
-                      combine artistic integrity with social impact.
+                      A visionary security expert with an unwavering commitment to protection excellence, 
+                      Anand founded Anand Lockers to address the growing need for reliable, accessible 
+                      secure storage solutions in today's challenging banking environment.
                     </p>
                     <p className="text-sm sm:text-base md:text-lg leading-relaxed">
-                      With a passion for storytelling that drives positive change, he has built
-                      a legacy of films that challenge perspectives and spark important
-                      conversations while maintaining the highest creative standards.
+                      With extensive experience in security systems and asset protection, he has built
+                      a legacy of trust and reliability, ensuring that every customer's valuables
+                      receive the highest level of care and protection they deserve.
                     </p>
                     
                     <div className="bg-blue-50 rounded-lg p-4 md:p-6 mt-4 border-l-4 border-blue-500">
-                      <h4 className="font-bold text-blue-800 text-base sm:text-lg md:text-xl mb-2">About Anand Cinemaz</h4>
+                      <h4 className="font-bold text-blue-800 text-base sm:text-lg md:text-xl mb-2">About Anand Lockers</h4>
                       <p className="text-gray-700 text-xs sm:text-sm md:text-base">
-                        Under Anand's leadership, Anand Cinemaz has emerged as a trusted name in meaningful cinema, 
-                        transforming stories into powerful visual experiences. With years of expertise, 
-                        we specialize in creating films that offer complete creative transparency and 
-                        exceptional emotional impact.
+                        Under Anand's leadership, Anand Lockers has emerged as a trusted name in secure storage, 
+                        transforming how people protect their valuable possessions. With state-of-the-art facilities 
+                        and bank-grade security standards, we provide complete peace of mind for all your storage needs.
                       </p>
                     </div>
                   </div>
@@ -352,10 +350,10 @@ const About = () => {
                     className="mt-8 w-full"
                   >
                     <div className="grid grid-cols-2 gap-3 md:gap-4 w-full max-w-md mx-auto lg:mx-0">
-                      <EnhancedStatCard title="50+" subtitle="Films" delay={0} />
-                      <EnhancedStatCard title="25+" subtitle="Awards" delay={0.1} />
-                      <EnhancedStatCard title="15+" subtitle="Years" delay={0.2} />
-                      <EnhancedStatCard title="100+" subtitle="Team" delay={0.3} />
+                      <EnhancedStatCard title="24/7" subtitle="Security" delay={0} />
+                      <EnhancedStatCard title="100%" subtitle="Reliability" delay={0.1} />
+                      <EnhancedStatCard title="5+" subtitle="Years" delay={0.2} />
+                      <EnhancedStatCard title="1000+" subtitle="Customers" delay={0.3} />
                     </div>
                   </motion.div>
                 </div>
@@ -365,7 +363,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Creative Approach */}
+      {/* Security Features */}
       <section ref={ref1} className="py-12 md:py-20 bg-slate-50">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div
@@ -376,15 +374,15 @@ const About = () => {
           >
             <motion.div variants={itemVariants} className="text-center mb-12 md:mb-16">
               <h2 className="text-2xl md:text-4xl font-bold text-blue-800 mb-4 md:mb-6">
-                Our Creative Approach
+                Our Security Features
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-2 sm:px-4">
-                The principles that guide our storytelling and filmmaking process
+                Advanced protection solutions designed for your peace of mind
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-              {creativeApproach.map((approach, index) => (
+              {securityFeatures.map((feature, index) => (
                 <motion.div
                   key={index}
                   variants={cardVariants}
@@ -392,13 +390,13 @@ const About = () => {
                   className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300 group"
                 >
                   <div className="text-4xl md:text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {approach.icon}
+                    {feature.icon}
                   </div>
-                  <h3 className={`text-lg sm:text-xl md:text-2xl font-bold mb-4 ${approach.accent} group-hover:${approach.accent.replace('text-', 'text-')}`}>
-                    {approach.title}
+                  <h3 className={`text-lg sm:text-xl md:text-2xl font-bold mb-4 ${feature.accent} group-hover:${feature.accent.replace('text-', 'text-')}`}>
+                    {feature.title}
                   </h3>
                   <p className="text-gray-600 text-sm sm:text-base leading-relaxed group-hover:text-gray-700 transition-colors">
-                    {approach.description}
+                    {feature.description}
                   </p>
                 </motion.div>
               ))}
@@ -407,7 +405,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Studio Principles */}
+      {/* Company Principles */}
       <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div
@@ -418,15 +416,15 @@ const About = () => {
             className="text-center mb-12 md:mb-16"
           >
             <h2 className="text-2xl md:text-4xl font-bold text-blue-800 mb-4 md:mb-6">
-              Our Studio Principles
+              Our Core Principles
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-2 sm:px-4">
-              The foundational values that shape every project and guide our creative decisions
+              The foundational values that guide our security services and customer relationships
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
-            {studioPrinciples.map((principle, index) => (
+            {companyPrinciples.map((principle, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -477,12 +475,13 @@ const About = () => {
                 >
                   <span>🎯</span> Our Purpose
                 </motion.div>
-                <h2 className="text-2xl md:text-4xl font-bold mb-6">Studio Mission</h2>
+                <h2 className="text-2xl md:text-4xl font-bold mb-6">Company Mission</h2>
                 <p className="text-slate-300 mb-6 leading-relaxed text-base md:text-lg">
-                  To create cinematic experiences that not only entertain but also inspire, educate, and provoke meaningful conversations about the human experience.
+                  To provide secure, accessible locker solutions that offer peace of mind and reliable protection 
+                  for valuable possessions in an era of limited banking options.
                 </p>
                 <div className="space-y-4">
-                  {['Tell stories with emotional authenticity', 'Push creative and technical boundaries', 'Foster collaborative creative environments'].map((item, index) => (
+                  {['Ensure maximum security for all stored items', 'Provide convenient access with strict protocols', 'Maintain transparent and trustworthy operations'].map((item, index) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
@@ -505,12 +504,13 @@ const About = () => {
                 >
                   <span>🔭</span> Future Vision
                 </motion.div>
-                <h2 className="text-2xl md:text-4xl font-bold mb-6">Studio Vision</h2>
+                <h2 className="text-2xl md:text-4xl font-bold mb-6">Company Vision</h2>
                 <p className="text-slate-300 mb-6 leading-relaxed text-base md:text-lg">
-                  To become a globally recognized creative studio known for pioneering socially relevant cinema that bridges cultures and inspires positive change.
+                  To become the most trusted secure storage provider, setting new standards in asset protection 
+                  while expanding accessibility across communities.
                 </p>
                 <div className="space-y-4">
-                  {['Expand global creative partnerships', 'Innovate in digital storytelling formats', 'Build a legacy of impactful cinema'].map((item, index) => (
+                  {['Expand secure facility locations nationwide', 'Innovate with smart security technologies', 'Build long-term customer trust and relationships'].map((item, index) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, x: 20 }}
@@ -530,7 +530,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Creative Collaboration */}
+      {/* Locker Services */}
       <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div
@@ -541,15 +541,15 @@ const About = () => {
             className="text-center mb-12 md:mb-16"
           >
             <h2 className="text-2xl md:text-4xl font-bold text-blue-800 mb-4 md:mb-6">
-              Creative Collaborations
+              Our Locker Services
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-2 sm:px-4">
-              Partner with us to bring extraordinary stories to life
+              Comprehensive storage solutions for all your valuable possessions
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
-            {creativeOpportunities.map((opportunity, index) => (
+            {lockerServices.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -559,16 +559,16 @@ const About = () => {
                 whileHover={{ y: -8, scale: 1.02 }}
                 className="group bg-white p-6 md:p-8 rounded-2xl border border-slate-200 hover:border-amber-300 transition-all duration-300 hover:shadow-xl"
               >
-                <div className={`${opportunity.bgColor} w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <span className={`text-2xl ${opportunity.color}`}>{opportunity.icon}</span>
+                <div className={`${service.bgColor} w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <span className={`text-2xl ${service.color}`}>{service.icon}</span>
                 </div>
 
                 <h3 className="text-lg md:text-2xl font-bold text-slate-800 mb-6 group-hover:text-amber-600 transition-colors duration-300">
-                  {opportunity.category}
+                  {service.category}
                 </h3>
 
                 <ul className="space-y-3 md:space-y-4">
-                  {opportunity.opportunities.map((item, itemIndex) => (
+                  {service.items.map((item, itemIndex) => (
                     <motion.li 
                       key={itemIndex}
                       initial={{ opacity: 0, x: -10 }}
@@ -577,7 +577,7 @@ const About = () => {
                       viewport={{ once: true }}
                       className="flex items-start gap-3 group/item"
                     >
-                      <div className={`w-2 h-2 rounded-full mt-2 ${opportunity.color} group-hover/item:scale-150 transition-transform duration-300`}></div>
+                      <div className={`w-2 h-2 rounded-full mt-2 ${service.color} group-hover/item:scale-150 transition-transform duration-300`}></div>
                       <span className="text-gray-700 text-sm md:text-base flex-1 group-hover/item:text-gray-900 transition-colors duration-300">
                         {item}
                       </span>
@@ -599,7 +599,7 @@ const About = () => {
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{
-                backgroundImage: 'url("https://cdn.pixabay.com/photo/2017/04/15/23/57/film-2233656_640.jpg")'
+                backgroundImage: 'url("https://cdn.pixabay.com/photo/2017/08/06/22/01/security-2596512_640.jpg")'
               }}
             ></div>
 
@@ -613,19 +613,20 @@ const About = () => {
                 viewport={{ once: true }}
                 className="max-w-2xl mx-auto"
               >
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">Start Your Creative Journey</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">Secure Your Valuables Today</h3>
                 <p className="text-slate-200 mb-8 leading-relaxed text-base md:text-lg">
-                  Have a story to tell? Let's discuss how we can bring your vision to life together.
+                  Don't let limited bank locker availability compromise your security. 
+                  Experience peace of mind with our premium locker solutions.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-                  <Link to='/projects'>
+                  <Link to='/services'>
                     <motion.button 
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-orange-500 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold hover:bg-orange-600 transition-all duration-300 text-sm sm:text-base w-full sm:w-auto"
+                      className="bg-amber-500 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold hover:bg-amber-600 transition-all duration-300 text-sm sm:text-base w-full sm:w-auto"
                     >
-                      Explore our Projects
+                      View Locker Options
                     </motion.button>
                   </Link>
                   <Link to='/contact'>
@@ -634,7 +635,7 @@ const About = () => {
                       whileTap={{ scale: 0.95 }}
                       className="border border-white text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300 text-sm sm:text-base w-full sm:w-auto"
                     >
-                      Contact Our Team
+                      Book a Consultation
                     </motion.button>
                   </Link>
                 </div>
@@ -655,10 +656,10 @@ const About = () => {
             className="text-center mb-12 md:mb-16"
           >
             <h2 className="text-2xl md:text-4xl font-bold text-blue-800 mb-4 md:mb-6">
-              Creative Leadership
+              Our Leadership Team
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-2 sm:px-4">
-              The visionaries behind our studio's creative direction and success
+              The experts ensuring your complete security and satisfaction
             </p>
           </motion.div>
 
@@ -673,7 +674,7 @@ const About = () => {
                 whileHover={{ y: -8, scale: 1.02 }}
                 className="text-center bg-white p-6 rounded-2xl shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300 group"
               >
-                <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:border-orange-200 transition-all duration-300">
+                <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:border-amber-200 transition-all duration-300">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -681,7 +682,7 @@ const About = () => {
                   />
                 </div>
                 <h3 className="text-lg md:text-2xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">{member.name}</h3>
-                <p className="text-orange-500 font-medium mb-4 text-sm md:text-base">{member.role}</p>
+                <p className="text-amber-500 font-medium mb-4 text-sm md:text-base">{member.role}</p>
                 <p className="text-gray-600 text-xs md:text-sm leading-relaxed group-hover:text-gray-700 transition-colors">{member.bio}</p>
               </motion.div>
             ))}
@@ -699,19 +700,20 @@ const About = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">
-              Ready to Create Something Extraordinary?
+              Ready to Secure Your Valuables?
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-blue-200 mb-6 md:mb-8 max-w-2xl mx-auto px-2 sm:px-4">
-              Discover how Anand Cinemaz's commitment to artistic excellence and storytelling can transform your creative vision into cinematic reality.
+              Discover how Anand Lockers' commitment to security excellence and customer trust 
+              can provide the peace of mind you deserve for your precious possessions.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-              <Link to='/projects'>
+              <Link to='/services'>
                 <motion.button 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg text-sm sm:text-base w-full sm:w-auto"
+                  className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg text-sm sm:text-base w-full sm:w-auto"
                 >
-                  Explore Our Films
+                  Explore Locker Sizes
                 </motion.button>
               </Link>
               <Link to='/contact'>
@@ -720,7 +722,7 @@ const About = () => {
                   whileTap={{ scale: 0.95 }}
                   className="border-2 border-white text-white hover:bg-white hover:text-blue-800 px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg text-sm sm:text-base w-full sm:w-auto"
                 >
-                  Get In Touch
+                  Get Started Today
                 </motion.button>
               </Link>
             </div>
@@ -748,7 +750,7 @@ function EnhancedStatCard({ title, subtitle, delay = 0 }) {
       }}
       className="group"
     >
-      <div className="bg-white rounded-xl shadow-lg p-3 sm:p-4 md:p-5 flex flex-col items-start justify-center ring-1 ring-gray-100 hover:ring-2 hover:ring-orange-200 hover:shadow-xl transition-all duration-300">
+      <div className="bg-white rounded-xl shadow-lg p-3 sm:p-4 md:p-5 flex flex-col items-start justify-center ring-1 ring-gray-100 hover:ring-2 hover:ring-amber-200 hover:shadow-xl transition-all duration-300">
         <div className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors duration-300 transform group-hover:scale-110">
           {title}
         </div>
@@ -756,7 +758,7 @@ function EnhancedStatCard({ title, subtitle, delay = 0 }) {
           {subtitle}
         </div>
         
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-orange-50/50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-amber-50/50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
       </div>
     </motion.div>
   );

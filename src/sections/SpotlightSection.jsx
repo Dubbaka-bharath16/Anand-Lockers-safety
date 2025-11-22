@@ -7,35 +7,28 @@ const SpotlightSection = () => {
   const isInView1 = useInView(ref1, { once: true, threshold: 0.3 })
   const isInView2 = useInView(ref2, { once: true, threshold: 0.3 })
 
-  const securityFeatures = [
-    { number: 256, text: "Bit Encryption", icon: "🔐", suffix: "-bit" },
-    { number: 365, text: "Days Monitoring", icon: "👁️", suffix: "" },
-    { number: 15, text: "Minute Response", icon: "⚡", suffix: "" },
-    { number: 100, text: "Insurance Coverage", icon: "📄", suffix: "%" }
+  const stats = [
+    { number: 5000, text: "Lockers Available" },
+    { number: 24, text: "Hour Surveillance" },
+    { number: 100, text: "Bank-Grade Safety" },
+    { number: 99, text: "Customer Satisfaction" }
   ]
 
-  const commitmentCards = [
-    {
-      icon: "🛡️",
-      title: "Unbreakable Security",
-      description: "Multi-layered protection system with biometric authentication, motion sensors, and advanced surveillance technology.",
-      features: ["Biometric Access", "Motion Detection", "24/7 Monitoring"]
-    },
-    {
-      icon: "💎",
-      title: "Premium Materials",
-      description: "Military-grade steel lockers with tamper-proof mechanisms and climate control for optimal preservation.",
-      features: ["Stainless Steel", "Climate Control", "Fire Resistant"]
-    },
-    {
-      icon: "🚀",
-      title: "Smart Technology",
-      description: "Digital access systems with mobile app integration and real-time monitoring for complete peace of mind.",
-      features: ["Mobile App", "Real-time Alerts", "Digital Access"]
-    }
+  const features = [
+    "Advanced security systems with continuous surveillance",
+    "Private, easy-access lockers in various sizes",
+    "High-standard protection comparable to bank-grade safety",
+    "A confidential and hassle-free experience for all customers"
   ]
 
-  const Counter = ({ target, delay = 0, suffix = "" }) => {
+  const valuables = [
+    "Jewelry",
+    "Important Documents", 
+    "Family Heirlooms",
+    "Valuable Assets"
+  ]
+
+  const Counter = ({ target, delay = 0 }) => {
     const [count, setCount] = React.useState(0)
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, threshold: 0.5 })
@@ -43,7 +36,7 @@ const SpotlightSection = () => {
     React.useEffect(() => {
       if (isInView) {
         let start = 0
-        const increment = target / 60
+        const increment = target / 50
         const timer = setInterval(() => {
           start += increment
           if (start >= target) {
@@ -52,7 +45,7 @@ const SpotlightSection = () => {
           } else {
             setCount(Math.ceil(start))
           }
-        }, 30)
+        }, 40)
         
         return () => clearInterval(timer)
       }
@@ -63,126 +56,110 @@ const SpotlightSection = () => {
         ref={ref}
         initial={{ opacity: 0, scale: 0.5 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay }}
+        transition={{ duration: 0.6, delay }}
         viewport={{ once: true }}
         className="text-4xl md:text-5xl font-bold text-orange-500 mb-3 font-montserrat"
       >
-        {count}{suffix}
+        {count}+
       </motion.div>
     )
   }
 
   return (
     <>
-      {/* Security Features Section */}
-      <section ref={ref1} className="py-20 md:py-28 bg-white relative overflow-hidden">
+      {/* Introduction Section */}
+      <section ref={ref1} className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
-          {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16 md:mb-20"
+            className="max-w-4xl mx-auto text-center"
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-navy-blue mb-6 font-playfair">
-              Advanced Security Systems
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto mb-6 rounded-full"></div>
-            <p className="text-lg md:text-xl text-charcoal max-w-3xl mx-auto font-opensans">
-              Cutting-edge technology meets uncompromising protection for your most valued possessions
-            </p>
+            <motion.div className="text-center mb-12 md:mb-16">
+              <h2 className="text-2xl md:text-4xl font-bold text-navy-blue mb-4 md:mb-6 font-playfair">
+                Welcome to Anand Lockers
+              </h2>
+              <div className="w-20 h-1 md:w-24 md:h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto mb-6 md:mb-8 rounded-full"></div>
+            </motion.div>
+
+            <motion.div>
+              <p className="text-base sm:text-lg md:text-xl text-charcoal leading-relaxed mb-6 md:mb-8 px-2 sm:px-4 font-opensans">
+                A secure, modern solution for safeguarding your most precious belongings. With bank lockers becoming increasingly difficult to obtain due to high demand and limited availability, we offer a reliable alternative designed with the same level of security, privacy, and trust.
+              </p>
+            </motion.div>
           </motion.div>
 
-          {/* Security Stats Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
-            {securityFeatures.map((stat, index) => (
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mt-16">
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center group"
+                className="flex items-start gap-4 p-6 bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-lg border border-blue-100"
               >
-                <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
-                  <div className="text-3xl mb-4 text-navy-blue">{stat.icon}</div>
-                  <Counter target={stat.number} delay={index * 0.1} suffix={stat.suffix} />
-                  <div className="text-lg font-semibold text-charcoal font-opensans">
-                    {stat.text}
-                  </div>
+                <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white text-sm mt-1 flex-shrink-0">
+                  ✓
                 </div>
+                <p className="text-charcoal leading-relaxed font-opensans">
+                  {feature}
+                </p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Commitment Section */}
-      <section ref={ref2} className="py-20 md:py-28 bg-gradient-to-br from-blue-50 to-gray-100 relative overflow-hidden">
+      {/* Stats & Protection Section */}
+      <section ref={ref2} className="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-gray-50">
         <div className="container mx-auto px-4 sm:px-6">
-          {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16 md:mb-20"
+            className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-navy-blue mb-6 font-playfair">
+            <h2 className="text-2xl md:text-4xl font-bold text-navy-blue mb-4 md:mb-6 font-playfair">
               Our Protection Promise
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-blue-500 mx-auto mb-6 rounded-full"></div>
-            <p className="text-lg md:text-xl text-charcoal max-w-3xl mx-auto font-opensans">
-              Every aspect of our service is designed around one principle: your complete peace of mind
+            <p className="text-base sm:text-lg md:text-xl text-charcoal max-w-2xl mx-auto px-2 sm:px-4 font-opensans">
+              Whether it's jewelry, important documents, family heirlooms, or valuable assets, Anand Lockers ensures they remain protected with the highest level of care.
             </p>
           </motion.div>
 
-          {/* Commitment Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {commitmentCards.map((card, index) => (
+          {/* Stats Grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
+            {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden group"
+                className="group"
               >
-                {/* Card Header */}
-                <div className="bg-gradient-to-r from-navy-blue to-blue-800 p-6 text-center">
-                  <div className="text-4xl mb-4">{card.icon}</div>
-                  <h3 className="text-xl font-bold text-white font-playfair">{card.title}</h3>
-                </div>
-                
-                {/* Card Body */}
-                <div className="p-6">
-                  <p className="text-charcoal leading-relaxed mb-6 font-opensans">
-                    {card.description}
-                  </p>
-                  
-                  {/* Features List */}
-                  <div className="space-y-3">
-                    {card.features.map((feature, featureIndex) => (
-                      <motion.div
-                        key={featureIndex}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.4, delay: featureIndex * 0.1 + 0.3 }}
-                        className="flex items-center gap-3 text-sm text-charcoal font-opensans"
-                      >
-                        <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                        {feature}
-                      </motion.div>
-                    ))}
-                  </div>
+                <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 text-center border border-gray-100 hover:shadow-xl transition-all duration-300">
+                  <Counter target={stat.number} delay={index * 0.1} />
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 + 0.5 }}
+                    viewport={{ once: true }}
+                    className="text-lg font-semibold text-charcoal font-opensans"
+                  >
+                    {stat.text}
+                  </motion.div>
                 </div>
               </motion.div>
             ))}
           </div>
 
-          {/* Trust Statement */}
+          {/* Valuables Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -190,89 +167,40 @@ const SpotlightSection = () => {
             viewport={{ once: true }}
             className="text-center mt-16"
           >
-            <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-gray-200 max-w-4xl mx-auto">
-              <div className="text-4xl mb-6">🏆</div>
-              <p className="text-xl md:text-2xl text-charcoal leading-relaxed italic font-playfair mb-6">
-                "We don't just store your valuables; we protect your legacy with the same care we would our own family heirlooms."
-              </p>
-              <div className="text-lg text-charcoal font-opensans">
-                — Anand Lockers Standard
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Technology Section */}
-      <section className="py-20 md:py-28 bg-white relative overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            {/* Left Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-navy-blue mb-6 font-playfair">
-                Innovative Protection Technology
-              </h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-blue-500 mb-6 rounded-full"></div>
-              <p className="text-lg text-charcoal leading-relaxed mb-8 font-opensans">
-                Our facilities incorporate the latest advancements in security technology, ensuring your belongings are protected by systems that set industry standards.
-              </p>
-              
-              <div className="space-y-4">
-                {[
-                  "Facial recognition access systems",
-                  "AI-powered threat detection",
-                  "Redundant power backups",
-                  "Encrypted digital audit trails",
-                  "Remote monitoring capabilities",
-                  "Emergency response protocols"
-                ].map((item, index) => (
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-blue-100 max-w-4xl mx-auto">
+              <h3 className="text-xl md:text-2xl font-bold text-navy-blue mb-6 font-playfair">
+                What We Protect
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {valuables.map((item, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="flex items-center gap-4 text-charcoal font-opensans"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 + 0.8 }}
+                    className="flex items-center justify-center p-4 bg-blue-50 rounded-lg border border-blue-200"
                   >
-                    <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white text-sm">
-                      ✓
-                    </div>
-                    {item}
+                    <span className="text-charcoal font-semibold font-opensans">{item}</span>
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
+            </div>
+          </motion.div>
 
-            {/* Right Content */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="grid grid-cols-2 gap-6"
-            >
-              {[
-                { icon: "📱", title: "Mobile Access", desc: "Control via smartphone" },
-                { icon: "🔔", title: "Instant Alerts", desc: "Real-time notifications" },
-                { icon: "🌐", title: "Cloud Backup", desc: "Secure data storage" },
-                { icon: "🛡️", title: "Cyber Security", desc: "Digital protection" }
-              ].map((tech, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-6 text-center shadow-lg border border-gray-200"
-                >
-                  <div className="text-3xl mb-3">{tech.icon}</div>
-                  <h4 className="font-bold text-navy-blue mb-2 font-montserrat">{tech.title}</h4>
-                  <p className="text-sm text-charcoal font-opensans">{tech.desc}</p>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
+          {/* Final Statement */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <div className="bg-gradient-to-r from-blue-50 to-white p-8 rounded-2xl shadow-lg border border-blue-100 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-charcoal leading-relaxed font-playfair">
+                "A secure space you can trust — because your valuables deserve nothing less."
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
     </>
