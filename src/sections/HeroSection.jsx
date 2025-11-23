@@ -38,7 +38,7 @@ const HeroSection = () => {
   const current = lockerFeatures[currentFeature];
 
   return (
-    <section className="bg-gradient-to-br from-navy-blue to-blue-900 text-white overflow-hidden pt-20 md:pt-24 pb-12">
+    <section className="bg-gradient-to-br from-navy-blue to-blue-900 text-white overflow-hidden pt-28 md:pt-24 pb-12">
       <div className="container mx-auto px-4">
         {/* Only large screens get tall hero; mobile behaves naturally */}
         <div className="flex flex-col lg:flex-row items-center lg:items-center lg:min-h-[80vh] gap-6 lg:gap-12">
@@ -116,8 +116,8 @@ const HeroSection = () => {
           </div>
 
           {/* RIGHT FEATURE CARD */}
-          <div className="lg:w-1/2 relative w-full max-w-md mx-auto mt-[-20px] sm:mt-[-10px] md:mt-0">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20 shadow-2xl">
+          <div className="lg:w-1/2 relative w-full max-w-md mx-auto mt-4 md:mt-0">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20 shadow-2xl relative">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentFeature}
@@ -156,24 +156,24 @@ const HeroSection = () => {
                   </div>
                 </motion.div>
               </AnimatePresence>
+
+              {/* Floating badges - Adjusted for mobile */}
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 3, repeat: Infinity }}
+                className="absolute top-2 right-2 md:-top-4 md:-right-4 bg-orange-500 text-white p-2 md:p-3 rounded-lg shadow-lg text-xs sm:text-sm"
+              >
+                🔒 Secure
+              </motion.div>
+
+              <motion.div
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+                className="absolute bottom-2 left-2 md:-bottom-4 md:-left-4 bg-blue-600 text-white p-2 md:p-3 rounded-lg shadow-lg text-xs sm:text-sm"
+              >
+                ⏰ 24/7 Access
+              </motion.div>
             </div>
-
-            {/* Floating badges */}
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="absolute -top-4 -right-4 bg-orange-500 text-white p-3 rounded-lg shadow-lg text-xs sm:text-sm"
-            >
-              🔒 Secure
-            </motion.div>
-
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-              className="absolute -bottom-4 -left-4 bg-blue-600 text-white p-3 rounded-lg shadow-lg text-xs sm:text-sm"
-            >
-              ⏰ 24/7 Access
-            </motion.div>
           </div>
         </div>
       </div>

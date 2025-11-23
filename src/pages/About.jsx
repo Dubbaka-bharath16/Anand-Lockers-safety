@@ -269,7 +269,7 @@ const About = () => {
                 <div className="relative group w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto">
                   <div className="w-full h-[350px] sm:h-[400px] md:h-[500px] lg:h-[580px] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-100 bg-white transform transition-all duration-500 group-hover:shadow-3xl group-hover:scale-[1.02] group-hover:ring-2 group-hover:ring-amber-200">
                     <img
-                      src="./images/CEO.png"
+                      src="./images/ceo.png"
                       alt="Founder & Security Director"
                       className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     />
@@ -406,57 +406,67 @@ const About = () => {
       </section>
 
       {/* Company Principles */}
-      <section className="py-12 md:py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16"
-          >
-            <h2 className="text-2xl md:text-4xl font-bold text-blue-800 mb-4 md:mb-6">
-              Our Core Principles
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-2 sm:px-4">
-              The foundational values that guide our security services and customer relationships
-            </p>
-          </motion.div>
+     <section className="py-12 md:py-20 bg-white">
+  <div className="container mx-auto px-4 sm:px-6">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-center mb-12 md:mb-16"
+    >
+      <h2 className="text-2xl md:text-4xl font-bold text-blue-800 mb-4 md:mb-6">
+        Our Core Principles
+      </h2>
+      <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-2 sm:px-4">
+        The foundational values that guide our security services and customer
+        relationships.
+      </p>
+    </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
-            {companyPrinciples.map((principle, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -4, scale: 1.02 }}
-                className={`
-                  ${principle.bgColor} p-6 md:p-8 rounded-2xl border-2 ${principle.borderColor} 
-                  transition-all duration-300 hover:shadow-xl
-                  flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6
-                `}
-              >
-                <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-lg">
-                  <div className={`text-2xl md:text-4xl ${principle.iconColor}`}>
-                    {principle.icon}
-                  </div>
-                </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
+      {companyPrinciples.map((principle, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: index * 0.1 }}
+          viewport={{ once: true }}
+          whileHover={{ y: -4, scale: 1.02 }}
+          className="
+            relative bg-white p-6 md:p-8 rounded-2xl 
+            border border-slate-100 shadow-sm 
+            hover:shadow-xl transition-all duration-300
+            flex items-start gap-4 md:gap-6
+          "
+        >
+          {/* Left colored strip */}
+          <div className="absolute left-0 top-0 h-full w-1.5 bg-amber-400 rounded-l-2xl" />
 
-                <div className="flex-1">
-                  <h3 className="text-lg md:text-2xl font-bold text-slate-800 mb-2 md:mb-4">
-                    {principle.title}
-                  </h3>
-                  <p className="text-gray-700 text-sm md:text-lg leading-relaxed">
-                    {principle.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+          {/* Icon */}
+          <div className="flex-shrink-0">
+            <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-amber-100 flex items-center justify-center">
+              <div className="text-2xl md:text-3xl text-amber-500">
+                {principle.icon}
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+
+          {/* Text */}
+          <div className="flex-1">
+            <h3 className="text-lg md:text-2xl font-bold text-slate-800 mb-2 md:mb-3">
+              {principle.title}
+            </h3>
+            <p className="text-gray-700 text-sm md:text-lg leading-relaxed">
+              {principle.description}
+            </p>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Mission & Vision */}
       <section ref={ref2} className="py-12 md:py-20 bg-blue-800 text-white">
@@ -531,120 +541,7 @@ const About = () => {
       </section>
 
       {/* Locker Services */}
-      <section className="py-12 md:py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16"
-          >
-            <h2 className="text-2xl md:text-4xl font-bold text-blue-800 mb-4 md:mb-6">
-              Our Locker Services
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-2 sm:px-4">
-              Comprehensive storage solutions for all your valuable possessions
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
-            {lockerServices.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className="group bg-white p-6 md:p-8 rounded-2xl border border-slate-200 hover:border-amber-300 transition-all duration-300 hover:shadow-xl"
-              >
-                <div className={`${service.bgColor} w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <span className={`text-2xl ${service.color}`}>{service.icon}</span>
-                </div>
-
-                <h3 className="text-lg md:text-2xl font-bold text-slate-800 mb-6 group-hover:text-amber-600 transition-colors duration-300">
-                  {service.category}
-                </h3>
-
-                <ul className="space-y-3 md:space-y-4">
-                  {service.items.map((item, itemIndex) => (
-                    <motion.li 
-                      key={itemIndex}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.4, delay: itemIndex * 0.1 }}
-                      viewport={{ once: true }}
-                      className="flex items-start gap-3 group/item"
-                    >
-                      <div className={`w-2 h-2 rounded-full mt-2 ${service.color} group-hover/item:scale-150 transition-transform duration-300`}></div>
-                      <span className="text-gray-700 text-sm md:text-base flex-1 group-hover/item:text-gray-900 transition-colors duration-300">
-                        {item}
-                      </span>
-                    </motion.li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Call to Action */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="relative rounded-2xl overflow-hidden"
-          >
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{
-                backgroundImage: 'url("https://cdn.pixabay.com/photo/2017/08/06/22/01/security-2596512_640.jpg")'
-              }}
-            ></div>
-
-            <div className="absolute inset-0 bg-slate-900/60"></div>
-
-            <div className="relative z-10 p-8 md:p-12 text-center text-white">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="max-w-2xl mx-auto"
-              >
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">Secure Your Valuables Today</h3>
-                <p className="text-slate-200 mb-8 leading-relaxed text-base md:text-lg">
-                  Don't let limited bank locker availability compromise your security. 
-                  Experience peace of mind with our premium locker solutions.
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-                  <Link to='/services'>
-                    <motion.button 
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="bg-amber-500 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold hover:bg-amber-600 transition-all duration-300 text-sm sm:text-base w-full sm:w-auto"
-                    >
-                      View Locker Options
-                    </motion.button>
-                  </Link>
-                  <Link to='/contact'>
-                    <motion.button 
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="border border-white text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300 text-sm sm:text-base w-full sm:w-auto"
-                    >
-                      Book a Consultation
-                    </motion.button>
-                  </Link>
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
+      
       {/* Leadership Team */}
       <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 ">

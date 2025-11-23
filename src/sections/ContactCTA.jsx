@@ -3,39 +3,39 @@ import { motion, useInView } from "framer-motion";
 
 const TESTIMONIALS = [
   {
-    name: "John Deo",
-    role: "CEO, Company Inc.",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed odio sit amet nibh vulputate cursus.",
+    name: "Rajesh Kumar",
+    role: "Business Owner",
+    text: "Anand Lockers provided me with the security and peace of mind I needed for my family heirlooms. The facility is impeccable and the staff is extremely professional.",
     avatar: "https://i.pravatar.cc/140?img=12",
     stars: 5,
   },
   {
-    name: "Jane Smith",
-    role: "Marketing, Agency X",
-    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+    name: "Priya Sharma",
+    role: "Legal Consultant",
+    text: "After struggling to get a bank locker for months, I found Anand Lockers. The process was seamless and the security measures are truly bank-grade. Highly recommended!",
     avatar: "https://i.pravatar.cc/140?img=32",
     stars: 5,
   },
   {
-    name: "Mike Johnson",
-    role: "Freelance Designer",
-    text: "Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus.",
+    name: "Amit Patel",
+    role: "IT Professional",
+    text: "The 24/7 access and advanced surveillance give me complete confidence. My important documents are safer here than they were in my previous bank locker.",
     avatar: "https://i.pravatar.cc/140?img=22",
-    stars: 4,
+    stars: 5,
   },
   {
-    name: "Anita Rao",
-    role: "Producer",
-    text: "They were wonderful to work with and delivered beyond expectations. Highly recommended.",
+    name: "Neha Gupta",
+    role: "Jewelry Designer",
+    text: "As a jewelry designer, I need secure storage for my inventory and raw materials. Anand Lockers offers the perfect solution with various sizes and top-notch security.",
     avatar: "https://i.pravatar.cc/140?img=47",
     stars: 5,
   },
   {
-    name: "Karan Mehta",
-    role: "Director",
-    text: "Great communication and tasteful creative judgment throughout the project.",
+    name: "Sanjay Mehta",
+    role: "Real Estate Developer",
+    text: "The private, hassle-free experience and confidential service make Anand Lockers stand out. My property documents have never been more secure.",
     avatar: "https://i.pravatar.cc/140?img=5",
-    stars: 4,
+    stars: 5,
   },
 ];
 
@@ -125,7 +125,7 @@ const TestimonialsClassic = () => {
             </h2>
             <div className="w-20 h-1 md:w-24 md:h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 mt-6 max-w-2xl mx-auto px-2 sm:px-4">
-              Hear from the talented professionals we've collaborated with
+              Hear from the valued customers who trust us with their precious belongings
             </p>
           </motion.div>
 

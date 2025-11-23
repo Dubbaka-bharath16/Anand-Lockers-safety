@@ -6,7 +6,7 @@ const Contact = () => {
     name: '',
     email: '',
     phone: '',
-    projectType: '',
+    lockerType: '',
     message: ''
   })
   const [showSuccess, setShowSuccess] = useState(false)
@@ -74,7 +74,7 @@ const Contact = () => {
       name: '',
       email: '',
       phone: '',
-      projectType: '',
+      lockerType: '',
       message: ''
     })
     
@@ -86,46 +86,46 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: 'map-marker-alt',
-      title: 'Studio Address',
-      content: 'Film City Complex, Studio 7B, Mumbai, India 400053',
+      title: 'Head Office',
+      content: '123 Security Lane, Mumbai, India 400053',
       link: '#'
     },
     {
       icon: 'phone',
       title: 'Phone',
-      content: '+91 22 6128 4000',
-      link: 'tel:+912261284000'
+      content: '+91 98765 43210',
+      link: 'tel:+919876543210'
     },
     {
       icon: 'envelope',
       title: 'Email',
-      content: 'projects@anandcinemaz.com',
-      link: 'mailto:projects@anandcinemaz.com'
+      content: 'info@anandlockers.com',
+      link: 'mailto:info@anandlockers.com'
     },
     {
       icon: 'clock',
       title: 'Business Hours',
-      content: 'Mon - Fri: 9:00 AM - 6:00 PM IST',
+      content: 'Mon - Sun: 8:00 AM - 8:00 PM IST',
       link: '#'
     }
   ]
 
   const faqs = [
     {
-      question: 'What types of projects do you produce?',
-      answer: 'We produce feature films, documentaries, and web series that combine meaningful storytelling with commercial appeal. Our focus is on projects with strong narratives and social relevance.'
+      question: 'What types of lockers do you offer?',
+      answer: 'We offer various locker sizes suitable for jewelry, important documents, family heirlooms, digital media, and business assets. Our lockers range from small to large sizes to accommodate different storage needs.'
     },
     {
-      question: 'How can I submit a script?',
-      answer: 'You can submit your project through our contact form. Please include a brief synopsis and your contact information. Our team reviews all submissions within 2-3 weeks.'
+      question: 'How secure are your locker facilities?',
+      answer: 'Our facilities feature bank-grade security with 24/7 surveillance, biometric access control, multi-layer authentication, and environmental monitoring to ensure complete protection of your valuables.'
     },
     {
-      question: 'Do you work with new filmmakers?',
-      answer: 'Yes, we welcome collaborations with both established and emerging filmmakers. We value fresh perspectives and compelling stories above all else.'
+      question: 'What is the process for getting a locker?',
+      answer: 'The process involves security assessment, identity verification with KYC documents, locker activation with dual authentication, and comprehensive orientation on security protocols.'
     },
     {
-      question: 'What is your production timeline?',
-      answer: 'Timelines vary by project scope. Feature films typically take 12-18 months from development to completion, while shorter projects may take 3-6 months.'
+      question: 'Can I access my locker anytime?',
+      answer: 'Yes, we offer extended access hours from 8:00 AM to 8:00 PM daily, including weekends. Our facilities are accessible with proper biometric verification and security clearance.'
     }
   ]
 
@@ -137,16 +137,14 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 overflow-x-hidden mt-24">
-      {/* Hero Section - Light Blue without Gradient */}
+      {/* Hero Section - Blue-800 Background */}
       <motion.section 
         ref={heroRef}
         initial={{ opacity: 0 }}
         animate={isHeroInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 1 }}
-        className="relative py-16 md:py-20 bg-blue-100 overflow-hidden"
+        className="relative py-16 md:py-20 bg-blue-800 overflow-hidden"
       >
-        {/* Background Elements - Removed gradient elements */}
-        
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -158,18 +156,18 @@ const Contact = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isHeroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-blue-800"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-white"
             >
-              Let's <span className="text-orange-500">Create</span> Together
+              Secure Your <span className="text-orange-500">Valuables</span> Today
             </motion.h1>
             
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={isHeroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-lg sm:text-xl md:text-2xl text-blue-700 leading-relaxed mb-8 max-w-3xl mx-auto px-2 sm:px-4"
+              className="text-lg sm:text-xl md:text-2xl text-blue-100 leading-relaxed mb-8 max-w-3xl mx-auto px-2 sm:px-4"
             >
-              Your vision, our expertise. Let's bring your cinematic dreams to life.
+              Your peace of mind is our priority. Experience bank-grade security with unmatched convenience.
             </motion.p>
           </motion.div>
         </div>
@@ -184,16 +182,16 @@ const Contact = () => {
             animate={isFormInView ? "visible" : "hidden"}
             className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto items-stretch"
           >
-            {/* Start Your Journey Card (left) */}
+            {/* Get Your Locker Card (left) */}
             <motion.div
               variants={cardVariants}
               whileHover={{ y: -5, scale: 1.02 }}
               className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 md:p-8 hover:shadow-xl hover:border-blue-300 transition-all duration-300 h-full flex flex-col"
             >
               <motion.div variants={itemVariants} className="text-center lg:text-left mb-6 md:mb-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-blue-800 mb-3 md:mb-4">Start Your Journey</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-blue-800 mb-3 md:mb-4">Get Your Locker</h2>
                 <p className="text-gray-600 text-base md:text-lg">
-                  Ready to bring your story to the screen? Share your vision with us.
+                  Ready to secure your valuables? Fill out the form and we'll help you choose the perfect locker.
                 </p>
               </motion.div>
               
@@ -235,7 +233,7 @@ const Contact = () => {
                 <div className="grid grid-cols-1 gap-4 md:gap-6">
                   <motion.div variants={itemVariants}>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number
+                      Phone Number *
                     </label>
                     <input
                       type="tel"
@@ -245,35 +243,35 @@ const Contact = () => {
                       onChange={handleChange}
                       className="w-full px-3 py-3 md:px-4 md:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-base"
                       placeholder="+91 98765 43210"
+                      required
                     />
                   </motion.div>
 
                   <motion.div variants={itemVariants}>
-                    <label htmlFor="projectType" className="block text-sm font-medium text-gray-700 mb-2">
-                      Project Type *
+                    <label htmlFor="lockerType" className="block text-sm font-medium text-gray-700 mb-2">
+                      Locker Size Interest *
                     </label>
                     <select
-                      id="projectType"
-                      name="projectType"
-                      value={formData.projectType}
+                      id="lockerType"
+                      name="lockerType"
+                      value={formData.lockerType}
                       onChange={handleChange}
                       className="w-full px-3 py-3 md:px-4 md:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 text-base"
                       required
                     >
-                      <option value="">Select project type</option>
-                      <option value="feature-film">Feature Film</option>
-                      <option value="documentary">Documentary</option>
-                      <option value="web-series">Web Series</option>
-                      <option value="short-film">Short Film</option>
-                      <option value="co-production">Co-Production</option>
-                      <option value="other">Other</option>
+                      <option value="">Select locker size</option>
+                      <option value="small">Small (Documents, Jewelry)</option>
+                      <option value="medium">Medium (Electronics, Important Files)</option>
+                      <option value="large">Large (Business Assets, Family Heirlooms)</option>
+                      <option value="custom">Custom Size Requirements</option>
+                      <option value="not-sure">Not Sure - Need Guidance</option>
                     </select>
                   </motion.div>
                 </div>
 
                 <motion.div variants={itemVariants}>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Your Vision *
+                    Additional Requirements *
                   </label>
                   <textarea
                     id="message"
@@ -282,7 +280,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full px-3 py-3 md:px-4 md:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 resize-none text-base"
-                    placeholder="Tell us about your project, your vision, and what you hope to achieve..."
+                    placeholder="Tell us about what you plan to store, your security concerns, and any specific requirements..."
                     required
                   ></textarea>
                 </motion.div>
@@ -304,7 +302,7 @@ const Contact = () => {
                       Submitting...
                     </>
                   ) : (
-                    'Submit Your Project'
+                    'Get Locker Details'
                   )}
                 </motion.button>
               </form>
@@ -323,7 +321,7 @@ const Contact = () => {
                     </div>
                     <div className="ml-3">
                       <p className="text-sm font-medium text-green-800">
-                        Thank you for your message! We'll review your project and get back to you within 48 hours.
+                        Thank you for your inquiry! We'll contact you within 24 hours with locker details and pricing.
                       </p>
                     </div>
                   </div>
@@ -331,7 +329,7 @@ const Contact = () => {
               )}
             </motion.div>
 
-            {/* Get In Touch Card (right) */}
+            {/* Contact Information Card (right) */}
             <motion.div
               variants={cardVariants}
               whileHover={{ y: -5, scale: 1.02 }}
@@ -339,9 +337,9 @@ const Contact = () => {
             >
               <div className="flex-1">
                 <motion.div variants={itemVariants} className="text-center lg:text-left mb-6 md:mb-8">
-                  <h2 className="text-2xl md:text-3xl font-bold text-blue-800 mb-3 md:mb-4">Get In Touch</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold text-blue-800 mb-3 md:mb-4">Contact Information</h2>
                   <p className="text-gray-600 text-base md:text-lg">
-                    Multiple ways to connect with our creative team.
+                    Multiple ways to reach our security experts.
                   </p>
                 </motion.div>
                 
@@ -382,7 +380,7 @@ const Contact = () => {
                   ))}
                 </div>
 
-                {/* Follow Us Section - Without Box Layout */}
+                {/* Follow Us Section */}
                 <motion.div 
                   variants={itemVariants}
                   className="text-center"
@@ -413,14 +411,6 @@ const Contact = () => {
                       </svg>
                     </a>
 
-                    {/* YouTube */}
-                    <a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube" 
-                       className="w-12 h-12 rounded-lg bg-red-600 flex items-center justify-center hover:bg-red-700 transition-all duration-300 hover:scale-110">
-                      <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                      </svg>
-                    </a>
-
                     {/* LinkedIn */}
                     <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" 
                        className="w-12 h-12 rounded-lg bg-blue-800 flex items-center justify-center hover:bg-blue-900 transition-all duration-300 hover:scale-110">
@@ -447,12 +437,14 @@ const Contact = () => {
               className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl hover:border-blue-300 transition-all duration-300"
             >
               <div className="p-4 md:p-6 text-center border-b border-gray-200">
-                <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">Visit Our Studio</h3>
-                <p className="text-gray-600 text-sm md:text-base">Film City Complex, Studio 7B, Mumbai, India 400053</p>
+                <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">Visit Our Facility</h3>
+                <p className="text-gray-600 text-sm md:text-base"> H.No. 131/A, 2nd Floor, MLA Colony, 
+                    Beside Vamsiram Banjara Abodes,
+                    Road No.12, Lane 14, Banjara Hills, Hyderabad-500034.</p>
               </div>
               <div className="w-full">
                 <iframe
-                  title="Studio Location"
+                  title="Facility Location"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.715872369528!2d72.87227731538557!3d19.065796387109767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8f73aaaaaab%3A0x5c0c2a5b1c0b5c0b!2sFilm%20City%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1633084800000!5m2!1sen!2sin"
                   width="100%"
                   height="250"
@@ -482,7 +474,7 @@ const Contact = () => {
               </h2>
               <div className="w-20 h-1 md:w-24 md:h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full"></div>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 mt-6 max-w-2xl mx-auto px-2 sm:px-4">
-                Get answers to common questions about working with us
+                Get answers to common questions about our locker services
               </p>
             </motion.div>
             
