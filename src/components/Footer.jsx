@@ -180,7 +180,7 @@ const Footer = () => {
               <ul className="">
                 {[
                   { path: "/", label: "Home" },
-                //   { path: "/about", label: "About" },
+                  // { path: "/about", label: "About" },
                   { path: "/services", label: "Services" },
                   { path: "/gallery", label: "Facilities" },
                   { path: "/contact", label: "Contact" },
@@ -211,10 +211,12 @@ const Footer = () => {
                   { title: "Digital Storage" },
                 ].map((service) => (
                   <li key={service.title}>
-                    <span className="text-white block py-1 transition-colors duration-200 hover:text-sunrise-gold">
-                      <span className="font-medium">{service.title}</span>
-                      {/* <span className="text-sm text-gray-300 ml-2">({service.year})</span> */}
-                    </span>
+                    {/* ✅ Linked to /services (only change) */}
+                    <Link to="/services">
+                      <span className="text-white block py-1 transition-colors duration-200 hover:text-sunrise-gold">
+                        <span className="font-medium">{service.title}</span>
+                      </span>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -276,7 +278,6 @@ const Footer = () => {
               {/* Left Side */}
               <p className="text-gray-400 text-sm text-center md:text-left">
                 &copy; {currentYear} Anand Lockers. All rights reserved.{" "}
-               
               </p>
 
               {/* Right Side - Developed By */}
