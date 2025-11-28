@@ -1,5 +1,24 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { 
+  Search, 
+  FileText, 
+  Shield, 
+  Monitor,
+  Lock,
+  CheckCircle,
+  Camera,
+  Fingerprint,
+  Thermometer,
+  Clock,
+  Calendar,
+  FileCheck,
+  Users,
+  Bell,
+  Headphones,
+  X,
+  Check
+} from 'lucide-react';
 
 const GalleryPreview = () => {
   const processRef = useRef(null);
@@ -58,22 +77,22 @@ const GalleryPreview = () => {
               
               {[
                 { 
-                  icon: "🔍", 
+                  icon: Search, 
                   title: "Security Assessment", 
                   description: "We conduct a thorough evaluation of your storage needs, risk factors, and security requirements to recommend the perfect locker solution." 
                 },
                 { 
-                  icon: "📝", 
+                  icon: FileText, 
                   title: "Documentation & Verification", 
                   description: "Streamlined KYC process with biometric verification and document checks to ensure authorized access and complete transparency." 
                 },
                 { 
-                  icon: "🔒", 
+                  icon: Lock, 
                   title: "Locker Activation", 
                   description: "Secure locker assignment with dual authentication, sealed activation, and comprehensive orientation on security protocols." 
                 },
                 { 
-                  icon: "🛡️", 
+                  icon: Shield, 
                   title: "Ongoing Protection", 
                   description: "Continuous monitoring, regular security audits, and proactive maintenance to ensure long-term protection of your valuables." 
                 }
@@ -86,9 +105,9 @@ const GalleryPreview = () => {
                 >
                   <motion.div 
                     whileHover={{ scale: 1.1, rotate: 5 }}
-                    className="step-icon w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-5 text-2xl text-white transition-all duration-300 group-hover:bg-orange-600"
+                    className="step-icon w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-5 text-white transition-all duration-300 group-hover:bg-orange-600"
                   >
-                    {step.icon}
+                    <step.icon className="w-8 h-8" />
                   </motion.div>
                   
                   <motion.h3 
@@ -138,17 +157,17 @@ const GalleryPreview = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
-                icon: "📹",
+                icon: Camera,
                 title: "Intelligent Surveillance",
                 text: "24/7 CCTV coverage with secure recording, blind-spot planning and structured incident review procedures.",
               },
               {
-                icon: "🧬",
+                icon: Fingerprint,
                 title: "Layered Access Control",
                 text: "Biometric verification, PIN authentication and controlled entry corridors ensure multiple levels of protection.",
               },
               {
-                icon: "🌡️",
+                icon: Thermometer,
                 title: "Environmental Safeguards",
                 text: "Temperature and humidity checks help preserve documents, jewellery and high-value assets over long periods.",
               },
@@ -164,7 +183,7 @@ const GalleryPreview = () => {
                   whileHover={{ scale: 1.1 }}
                   className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500 flex items-center justify-center shadow-lg"
                 >
-                  <span className="text-2xl text-white">{item.icon}</span>
+                  <item.icon className="w-8 h-8 text-white" />
                 </motion.div>
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-4 group-hover:text-orange-100 transition-colors duration-300">
                   {item.title}
@@ -214,8 +233,8 @@ const GalleryPreview = () => {
               className="bg-red-50 border border-red-100 rounded-3xl p-6 sm:p-8 shadow-sm"
             >
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-9 h-9 rounded-xl bg-red-100 flex items-center justify-center text-red-500 text-lg">
-                  ✕
+                <div className="w-9 h-9 rounded-xl bg-red-100 flex items-center justify-center text-red-500">
+                  <X className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-red-900">
                   Traditional Bank Lockers
@@ -224,27 +243,27 @@ const GalleryPreview = () => {
 
               <ul className="space-y-3 text-sm md:text-base text-red-900/90">
                 <li className="flex gap-2">
-                  <span className="mt-1 text-red-500 text-xs">✕</span>
+                  <X className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
                   <span>Long waiting lists; allocation can take months or even years.</span>
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1 text-red-500 text-xs">✕</span>
+                  <X className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
                   <span>Access allowed only during branch banking hours and working days.</span>
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1 text-red-500 text-xs">✕</span>
+                  <X className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
                   <span>Multiple forms, approvals and counters make documentation slow and complex.</span>
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1 text-red-500 text-xs">✕</span>
+                  <X className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
                   <span>Limited locker sizes and very few available units in high-demand branches.</span>
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1 text-red-500 text-xs">✕</span>
+                  <X className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
                   <span>Minimal digital communication, tracking or proactive reminders.</span>
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1 text-red-500 text-xs">✕</span>
+                  <X className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
                   <span>Issue resolution depends heavily on bank workload and internal priorities.</span>
                 </li>
               </ul>
@@ -257,8 +276,8 @@ const GalleryPreview = () => {
               className="bg-emerald-50 border border-emerald-100 rounded-3xl p-6 sm:p-8 shadow-sm"
             >
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-9 h-9 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600 text-lg">
-                  ✓
+                <div className="w-9 h-9 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600">
+                  <Check className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-emerald-900">
                   Anand Lockers
@@ -267,31 +286,68 @@ const GalleryPreview = () => {
 
               <ul className="space-y-3 text-sm md:text-base text-emerald-900/90">
                 <li className="flex gap-2">
-                  <span className="mt-1 text-emerald-600 text-xs">✓</span>
+                  <Check className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" />
                   <span>Faster allocation with clear visibility of locker sizes and availability.</span>
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1 text-emerald-600 text-xs">✓</span>
+                  <Check className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" />
                   <span>Extended access timings with biometric security and controlled entry.</span>
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1 text-emerald-600 text-xs">✓</span>
+                  <Check className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" />
                   <span>Simplified, guided documentation for individuals, families and businesses.</span>
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1 text-emerald-600 text-xs">✓</span>
+                  <Check className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" />
                   <span>Locker sizes tailored for jewellery, documents, digital media and business assets.</span>
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1 text-emerald-600 text-xs">✓</span>
+                  <Check className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" />
                   <span>Structured communication for renewals, visits and important safety updates.</span>
                 </li>
                 <li className="flex gap-2">
-                  <span className="mt-1 text-emerald-600 text-xs">✓</span>
+                  <Check className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" />
                   <span>Dedicated security-focused teams, quicker decisions and personalised support.</span>
                 </li>
               </ul>
             </motion.div>
+          </motion.div>
+
+          {/* Additional Features */}
+          <motion.div
+            variants={containerVariants}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-12"
+          >
+            {[
+              {
+                icon: Clock,
+                title: "Extended Access Hours",
+                description: "Access your locker beyond traditional banking hours with our flexible timing system."
+              },
+              {
+                icon: FileCheck,
+                title: "Digital Documentation",
+                description: "Complete your KYC and documentation digitally for faster processing and approval."
+              },
+              {
+                icon: Headphones,
+                title: "Dedicated Support",
+                description: "Get personalized assistance from our security-focused customer support team."
+              }
+            ].map((feature, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="bg-white rounded-xl border border-gray-200 p-6 text-center shadow-sm hover:shadow-md transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="font-semibold text-blue-800 mb-2">{feature.title}</h3>
+                <p className="text-sm text-gray-600">{feature.description}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </motion.section>

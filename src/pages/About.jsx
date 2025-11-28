@@ -2,6 +2,33 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useAnimation } from '../hooks/useAnimation';
+import { 
+  Shield,
+  Package,
+  Building,
+  Target,
+  Eye,
+  Users,
+  Zap,
+  Key,
+  Camera,
+  Fingerprint,
+  Thermometer,
+  Award,
+  Star,
+  Clock,
+  MapPin,
+  Phone,
+  Mail,
+  CheckCircle,
+  Lock,
+  FileText,
+  UserCheck,
+  Heart,
+  Briefcase,
+  Gem,
+  FileCheck
+} from 'lucide-react';
 
 const About = () => {
   useAnimation();
@@ -15,19 +42,19 @@ const About = () => {
 
   const securityFeatures = [
     {
-      icon: '🔒',
+      icon: Shield,
       title: 'Advanced Security Systems',
       description: 'State-of-the-art surveillance and access control systems ensuring continuous protection and monitoring of your valuables.',
       accent: 'text-blue-600'
     },
     {
-      icon: '📦',
+      icon: Package,
       title: 'Multiple Size Options',
       description: 'Private, easy-access lockers available in various sizes to accommodate everything from documents to family heirlooms.',
       accent: 'text-amber-600'
     },
     {
-      icon: '🏦',
+      icon: Building,
       title: 'Bank-Grade Safety',
       description: 'High-standard protection comparable to traditional bank lockers with enhanced accessibility and convenience.',
       accent: 'text-green-600'
@@ -57,7 +84,7 @@ const About = () => {
 
   const companyPrinciples = [
     {
-      icon: '🛡️',
+      icon: Shield,
       title: 'Uncompromising Security',
       description: 'Every security measure we implement is designed to provide maximum protection while maintaining ease of access for our valued customers.',
       bgColor: 'bg-blue-50',
@@ -65,7 +92,7 @@ const About = () => {
       iconColor: 'text-blue-600'
     },
     {
-      icon: '🤝',
+      icon: Users,
       title: 'Customer Trust',
       description: 'We build relationships based on transparency, reliability, and the highest ethical standards in asset protection.',
       bgColor: 'bg-amber-50',
@@ -73,7 +100,7 @@ const About = () => {
       iconColor: 'text-amber-600'
     },
     {
-      icon: '⚡',
+      icon: Zap,
       title: 'Modern Solutions',
       description: 'Embracing the latest security technologies to provide a hassle-free, confidential experience that meets modern needs.',
       bgColor: 'bg-green-50',
@@ -81,7 +108,7 @@ const About = () => {
       iconColor: 'text-green-600'
     },
     {
-      icon: '🔑',
+      icon: Key,
       title: 'Easy Access',
       description: 'Providing convenient access to your valuables while maintaining the highest security standards you expect and deserve.',
       bgColor: 'bg-purple-50',
@@ -98,7 +125,7 @@ const About = () => {
         'Protection for important documents and certificates',
         'Safe keeping for family heirlooms and collectibles'
       ],
-      icon: '💎',
+      icon: Gem,
       color: 'text-purple-600',
       bgColor: 'bg-purple-50'
     },
@@ -109,7 +136,7 @@ const About = () => {
         'Secure backup media and data protection',
         'Valuable business equipment and assets'
       ],
-      icon: '🏢',
+      icon: Briefcase,
       color: 'text-blue-600',
       bgColor: 'bg-blue-50'
     },
@@ -120,7 +147,7 @@ const About = () => {
         'Travel document and currency security',
         'Emergency backup storage solutions'
       ],
-      icon: '🌟',
+      icon: Star,
       color: 'text-amber-600',
       bgColor: 'bg-amber-50'
     }
@@ -350,10 +377,10 @@ const About = () => {
                     className="mt-8 w-full"
                   >
                     <div className="grid grid-cols-2 gap-3 md:gap-4 w-full max-w-md mx-auto lg:mx-0">
-                      <EnhancedStatCard title="24/7" subtitle="Security" delay={0} />
-                      <EnhancedStatCard title="100%" subtitle="Reliability" delay={0.1} />
-                      <EnhancedStatCard title="5+" subtitle="Years" delay={0.2} />
-                      <EnhancedStatCard title="1000+" subtitle="Customers" delay={0.3} />
+                      <EnhancedStatCard title="24/7" subtitle="Security" delay={0} icon={Shield} />
+                      <EnhancedStatCard title="100%" subtitle="Reliability" delay={0.1} icon={CheckCircle} />
+                      <EnhancedStatCard title="5+" subtitle="Years" delay={0.2} icon={Award} />
+                      <EnhancedStatCard title="1000+" subtitle="Customers" delay={0.3} icon={Users} />
                     </div>
                   </motion.div>
                 </div>
@@ -389,8 +416,8 @@ const About = () => {
                   whileHover={{ y: -8, scale: 1.02 }}
                   className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300 group"
                 >
-                  <div className="text-4xl md:text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {feature.icon}
+                  <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-blue-100 transition-colors duration-300">
+                    <feature.icon className={`w-8 h-8 ${feature.accent}`} />
                   </div>
                   <h3 className={`text-lg sm:text-xl md:text-2xl font-bold mb-4 ${feature.accent} group-hover:${feature.accent.replace('text-', 'text-')}`}>
                     {feature.title}
@@ -406,67 +433,58 @@ const About = () => {
       </section>
 
       {/* Company Principles */}
-     <section className="py-12 md:py-20 bg-white">
-  <div className="container mx-auto px-4 sm:px-6">
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-      className="text-center mb-12 md:mb-16"
-    >
-      <h2 className="text-2xl md:text-4xl font-bold text-blue-800 mb-4 md:mb-6">
-        Our Core Principles
-      </h2>
-      <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-2 sm:px-4">
-        The foundational values that guide our security services and customer
-        relationships.
-      </p>
-    </motion.div>
-
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
-      {companyPrinciples.map((principle, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: index * 0.1 }}
-          viewport={{ once: true }}
-          whileHover={{ y: -4, scale: 1.02 }}
-          className="
-            relative bg-white p-6 md:p-8 rounded-2xl 
-            border border-slate-100 shadow-sm 
-            hover:shadow-xl transition-all duration-300
-            flex items-start gap-4 md:gap-6
-          "
-        >
-          {/* Left colored strip */}
-          <div className="absolute left-0 top-0 h-full w-1.5 bg-amber-400 rounded-l-2xl" />
-
-          {/* Icon */}
-          <div className="flex-shrink-0">
-            <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-amber-100 flex items-center justify-center">
-              <div className="text-2xl md:text-3xl text-amber-500">
-                {principle.icon}
-              </div>
-            </div>
-          </div>
-
-          {/* Text */}
-          <div className="flex-1">
-            <h3 className="text-lg md:text-2xl font-bold text-slate-800 mb-2 md:mb-3">
-              {principle.title}
-            </h3>
-            <p className="text-gray-700 text-sm md:text-lg leading-relaxed">
-              {principle.description}
+      <section className="py-12 md:py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 md:mb-16"
+          >
+            <h2 className="text-2xl md:text-4xl font-bold text-blue-800 mb-4 md:mb-6">
+              Our Core Principles
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-2 sm:px-4">
+              The foundational values that guide our security services and customer relationships.
             </p>
-          </div>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
+          </motion.div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
+            {companyPrinciples.map((principle, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -4, scale: 1.02 }}
+                className="relative bg-white p-6 md:p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex items-start gap-4 md:gap-6"
+              >
+                {/* Left colored strip */}
+                <div className="absolute left-0 top-0 h-full w-1.5 bg-amber-400 rounded-l-2xl" />
+
+                {/* Icon */}
+                <div className="flex-shrink-0">
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-amber-100 flex items-center justify-center">
+                    <principle.icon className="w-6 h-6 md:w-7 md:h-7 text-amber-500" />
+                  </div>
+                </div>
+
+                {/* Text */}
+                <div className="flex-1">
+                  <h3 className="text-lg md:text-2xl font-bold text-slate-800 mb-2 md:mb-3">
+                    {principle.title}
+                  </h3>
+                  <p className="text-gray-700 text-sm md:text-lg leading-relaxed">
+                    {principle.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Mission & Vision */}
       <section ref={ref2} className="py-12 md:py-20 bg-blue-800 text-white">
@@ -483,7 +501,8 @@ const About = () => {
                   variants={cardVariants}
                   className="inline-flex items-center justify-center md:justify-start gap-2 bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6"
                 >
-                  <span>🎯</span> Our Purpose
+                  <Target className="w-4 h-4" />
+                  Our Purpose
                 </motion.div>
                 <h2 className="text-2xl md:text-4xl font-bold mb-6">Company Mission</h2>
                 <p className="text-slate-300 mb-6 leading-relaxed text-base md:text-lg">
@@ -500,7 +519,7 @@ const About = () => {
                       viewport={{ once: true }}
                       className="flex items-center gap-3"
                     >
-                      <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
+                      <CheckCircle className="w-4 h-4 text-amber-400 flex-shrink-0" />
                       <span className="text-slate-300 text-sm md:text-base">{item}</span>
                     </motion.div>
                   ))}
@@ -512,7 +531,8 @@ const About = () => {
                   variants={cardVariants}
                   className="inline-flex items-center justify-center md:justify-start gap-2 bg-amber-500 text-white px-4 py-2 rounded-full text-sm font-medium mb-6"
                 >
-                  <span>🔭</span> Future Vision
+                  <Eye className="w-4 h-4" />
+                  Future Vision
                 </motion.div>
                 <h2 className="text-2xl md:text-4xl font-bold mb-6">Company Vision</h2>
                 <p className="text-slate-300 mb-6 leading-relaxed text-base md:text-lg">
@@ -529,7 +549,7 @@ const About = () => {
                       viewport={{ once: true }}
                       className="flex items-center gap-3"
                     >
-                      <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                      <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
                       <span className="text-slate-300 text-sm md:text-base">{item}</span>
                     </motion.div>
                   ))}
@@ -540,11 +560,9 @@ const About = () => {
         </div>
       </section>
 
-      {/* Locker Services */}
-      
       {/* Leadership Team */}
       <section className="py-12 md:py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 ">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -633,7 +651,7 @@ const About = () => {
 export default About;
 
 /* Enhanced Stat Card Component */
-function EnhancedStatCard({ title, subtitle, delay = 0 }) {
+function EnhancedStatCard({ title, subtitle, delay = 0, icon: Icon }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -648,10 +666,13 @@ function EnhancedStatCard({ title, subtitle, delay = 0 }) {
       className="group"
     >
       <div className="bg-white rounded-xl shadow-lg p-3 sm:p-4 md:p-5 flex flex-col items-start justify-center ring-1 ring-gray-100 hover:ring-2 hover:ring-amber-200 hover:shadow-xl transition-all duration-300">
-        <div className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors duration-300 transform group-hover:scale-110">
-          {title}
+        <div className="flex items-center gap-2 mb-2">
+          <Icon className="w-4 h-4 text-amber-500" />
+          <div className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors duration-300 transform group-hover:scale-110">
+            {title}
+          </div>
         </div>
-        <div className="text-xs text-gray-400 mt-1 group-hover:text-gray-600 transition-colors duration-300">
+        <div className="text-xs text-gray-400 group-hover:text-gray-600 transition-colors duration-300">
           {subtitle}
         </div>
         
