@@ -2,24 +2,32 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import { 
+  Shield, 
+  Thermometer, 
+  Clock, 
+  Lock,
+  CheckCircle,
+  Building
+} from 'lucide-react';
 
 const lockerFeatures = [
   {
     title: "Bank-Grade Security",
     description: "Military-level protection with biometric access and 24/7 surveillance",
-    icon: "🔒",
+    icon: Shield,
     image: "/images/security-system.jpg",
   },
   {
     title: "Climate Controlled",
     description: "Optimal temperature & humidity control for your valuables",
-    icon: "🌡️",
+    icon: Thermometer,
     image: "/images/locker-facility.jpg",
   },
   {
     title: "24/7 Access",
     description: "Access your locker anytime with extended hours",
-    icon: "🕒",
+    icon: Clock,
     image: "/images/interior.jpg",
   },
 ];
@@ -128,7 +136,11 @@ const HeroSection = () => {
                   className="text-center"
                 >
                   {/* Icon */}
-                  <div className="text-5xl sm:text-6xl mb-5">{current.icon}</div>
+                  <div className="flex justify-center mb-5">
+                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                      <current.icon className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
 
                   {/* Title */}
                   <h3 className="text-lg sm:text-2xl font-bold text-white mb-3">
@@ -161,17 +173,19 @@ const HeroSection = () => {
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="absolute top-2 right-2 md:-top-4 md:-right-4 bg-orange-500 text-white p-2 md:p-3 rounded-lg shadow-lg text-xs sm:text-sm"
+                className="absolute top-2 right-2 md:-top-4 md:-right-4 bg-orange-500 text-white p-2 md:p-3 rounded-lg shadow-lg text-xs sm:text-sm flex items-center gap-1"
               >
-                🔒 Secure
+                <Lock className="w-3 h-3" />
+                Secure
               </motion.div>
 
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-                className="absolute bottom-2 left-2 md:-bottom-4 md:-left-4 bg-blue-600 text-white p-2 md:p-3 rounded-lg shadow-lg text-xs sm:text-sm"
+                className="absolute bottom-2 left-2 md:-bottom-4 md:-left-4 bg-blue-600 text-white p-2 md:p-3 rounded-lg shadow-lg text-xs sm:text-sm flex items-center gap-1"
               >
-                ⏰ 24/7 Access
+                <Clock className="w-3 h-3" />
+                24/7 Access
               </motion.div>
             </div>
           </div>

@@ -1,34 +1,43 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
+import { 
+  Briefcase, 
+  Building, 
+  Shield,
+  Users,
+  FileText,
+  Lock,
+  Clock
+} from 'lucide-react';
 
 const AboutPreview = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, threshold: 0.3 });
 
   const offerings = [
-  {
-    icon: "💼",
-    label: "Individual & Family Lockers",
-    title: "Secure Storage for Personal Assets",
-    description:
-      "Designed for individuals and families seeking a highly secure space for jewellery, legal papers, financial documents, and essential personal assets."
-  },
-  {
-    icon: "🏢",
-    label: "Corporate & Business Lockers",
-    title: "Confidential Business Asset Protection",
-    description:
-      "Ideal for enterprises that require secure storage for confidential files, backup data, digital media, contracts, and sensitive operational material."
-  },
-  {
-    icon: "🛡️",
-    label: "Short-Term & Priority Access",
-    title: "Flexible High-Security Storage Plans",
-    description:
-      "A tailored solution for customers needing temporary protection during travel, renovations, events, or transitional periods with full-time security."
-  }
-];
+    {
+      icon: Briefcase,
+      label: "Individual & Family Lockers",
+      title: "Secure Storage for Personal Assets",
+      description:
+        "Designed for individuals and families seeking a highly secure space for jewellery, legal papers, financial documents, and essential personal assets."
+    },
+    {
+      icon: Building,
+      label: "Corporate & Business Lockers",
+      title: "Confidential Business Asset Protection",
+      description:
+        "Ideal for enterprises that require secure storage for confidential files, backup data, digital media, contracts, and sensitive operational material."
+    },
+    {
+      icon: Shield,
+      label: "Short-Term & Priority Access",
+      title: "Flexible High-Security Storage Plans",
+      description:
+        "A tailored solution for customers needing temporary protection during travel, renovations, events, or transitional periods with full-time security."
+    }
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -107,13 +116,13 @@ const AboutPreview = () => {
                     <div className="flex justify-center mb-4">
                       <div
                         className="
-                          w-14 h-14 rounded-full flex items-center justify-center text-2xl
+                          w-14 h-14 rounded-full flex items-center justify-center
                           bg-blue-50
                           group-hover:bg-white
                           transition-colors duration-300
                         "
                       >
-                        {item.icon}
+                        <item.icon className="w-6 h-6 text-blue-600 group-hover:text-blue-800 transition-colors duration-300" />
                       </div>
                     </div>
 
