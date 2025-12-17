@@ -55,31 +55,30 @@ const SpotlightSection = () => {
     <>
       {/* Mission Section */}
       <section ref={ref1} className="py-16 md:py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6">
-          <motion.div
+    <div className="container mx-auto px-4 sm:px-6">
+        <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={isInView1 ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
-          >
+        >
             <h2 className="text-3xl md:text-5xl font-bold text-blue-900 mb-4">
-              Built on Trust. Backed by Safety.
+                Who We Are
             </h2>
 
-            <div className="w-20 h-1 bg-blue-800 mx-auto rounded-full mb-8"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full mb-8"></div>
 
-            <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed mb-4 px-2">
-              Anand Lockers provides high-security locker systems designed with
-              precision and modern technology to protect your most valuable belongings.
+            <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed mb-6 px-2">
+                Anand Lockers provides a secure, modern solution for safeguarding your most precious belongings. We are a reliable alternative to bank lockers, designed with the same level of security, privacy, and trust.
             </p>
 
             <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed px-2">
-              With round-the-clock surveillance and state-of-the-art protection, we deliver
-              unmatched peace of mind and complete security.
+                Our state of the art facilities provide advanced security systems with continuous surveillance, private easy access lockers in various sizes, and high standard protection comparable to bank grade safety. A secure space you can trust because your valuables deserve nothing less.
             </p>
-          </motion.div>
-        </div>
-      </section>
+        </motion.div>
+    </div>
+</section>
+
 
       {/* Stats Section */}
       <section ref={ref2} className="py-16 md:py-20 bg-blue-50">

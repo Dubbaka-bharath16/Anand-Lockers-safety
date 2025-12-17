@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { 
-  Search, 
-  FileText, 
-  Shield, 
+import {
+  Search,
+  FileText,
+  Shield,
   Monitor,
   Lock,
   CheckCircle,
@@ -65,36 +65,36 @@ const GalleryPreview = () => {
             initial="hidden"
             animate={isProcessInView ? "visible" : "hidden"}
           >
-            <motion.h2 
+            <motion.h2
               variants={itemVariants}
               className="text-4xl font-bold text-blue-800 text-center mb-12 relative"
             >
               Our Security Process
             </motion.h2>
-            
+
             <div className="process-steps flex flex-col lg:flex-row justify-between relative mt-12">
               <div className="absolute top-10 left-0 right-0 h-0.5 bg-gray-300 z-10 hidden lg:block"></div>
-              
+
               {[
-                { 
-                  icon: Search, 
-                  title: "Security Assessment", 
-                  description: "We conduct a thorough evaluation of your storage needs, risk factors, and security requirements to recommend the perfect locker solution." 
+                {
+                  icon: Search,
+                  title: "Security Assessment",
+                  description: "We conduct a thorough evaluation of your storage needs, risk factors, and security requirements to recommend the perfect locker solution."
                 },
-                { 
-                  icon: FileText, 
-                  title: "Documentation & Verification", 
-                  description: "Streamlined KYC process with biometric verification and document checks to ensure authorized access and complete transparency." 
+                {
+                  icon: FileText,
+                  title: "Documentation & Verification",
+                  description: "Streamlined KYC process with biometric verification and document checks to ensure authorized access and complete transparency."
                 },
-                { 
-                  icon: Lock, 
-                  title: "Locker Activation", 
-                  description: "Secure locker assignment with dual authentication, sealed activation, and comprehensive orientation on security protocols." 
+                {
+                  icon: Lock,
+                  title: "Locker Activation",
+                  description: "Secure locker assignment with dual authentication, sealed activation, and comprehensive orientation on security protocols."
                 },
-                { 
-                  icon: Shield, 
-                  title: "Ongoing Protection", 
-                  description: "Continuous monitoring, regular security audits, and proactive maintenance to ensure long-term protection of your valuables." 
+                {
+                  icon: Shield,
+                  title: "Ongoing Protection",
+                  description: "Continuous monitoring, regular security audits, and proactive maintenance to ensure long-term protection of your valuables."
                 }
               ].map((step, index) => (
                 <motion.div
@@ -103,20 +103,20 @@ const GalleryPreview = () => {
                   whileHover={{ y: -8, scale: 1.05 }}
                   className="process-step text-center relative z-20 flex-1 px-4 mb-12 lg:mb-0 group"
                 >
-                  <motion.div 
+                  <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     className="step-icon w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-5 text-white transition-all duration-300 group-hover:bg-orange-600"
                   >
                     <step.icon className="w-8 h-8" />
                   </motion.div>
-                  
-                  <motion.h3 
+
+                  <motion.h3
                     className="step-title font-semibold mb-3 text-blue-800 group-hover:text-blue-600 transition-colors duration-300"
                   >
                     {step.title}
                   </motion.h3>
-                  
-                  <motion.p 
+
+                  <motion.p
                     className="step-description text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -149,8 +149,9 @@ const GalleryPreview = () => {
             </h2>
             <div className="w-20 h-1 md:w-24 md:h-1 bg-gradient-to-r from-blue-400 to-orange-400 mx-auto rounded-full"></div>
             <p className="text-lg md:text-xl text-blue-100 mt-6 max-w-2xl mx-auto px-4">
-              Anand Lockers combines vault-grade infrastructure, digital controls and a trained
-              security team to maintain a consistent level of protection for all customers.
+              Anand Lockers combines vault grade infrastructure, digital controls and  standardised
+              security protocols
+              to maintain a consistent level of protection for all customers.
             </p>
           </motion.div>
 
@@ -212,7 +213,7 @@ const GalleryPreview = () => {
             className="text-center max-w-3xl mx-auto mb-10 md:mb-14"
           >
             <h2 className="text-2xl md:text-4xl font-bold text-blue-800 mb-4 md:mb-6">
-              Why Choose Anand Over Banks?
+              Why Choose Anand Lockers Over Banks?
             </h2>
             <div className="w-20 h-1 md:w-24 md:h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full"></div>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 mt-6 max-w-2xl mx-auto px-4">

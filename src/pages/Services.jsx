@@ -135,7 +135,7 @@ const Services = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed"
             >
-              Bank-grade security solutions for your most precious belongings. 
+              Bank-grade security solutions for your most precious belongings.
               No waiting lists, just immediate protection with unmatched convenience.
             </motion.p>
           </motion.div>
@@ -158,9 +158,11 @@ const Services = () => {
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto mb-6 rounded-full"></div>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                From personal valuables to business assets, we provide comprehensive security solutions 
-                with the same level of protection as leading banks, but with greater availability and convenience.
+                From personal valuables to business assets, we provide professionally managed
+                security solutions designed to offer dependable protection with wider access
+                and greater convenience.
               </p>
+
             </motion.div>
 
             <motion.div
@@ -175,26 +177,25 @@ const Services = () => {
                   className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
                 >
                   <div className="relative h-64 overflow-hidden">
-                    <motion.img 
-                      src={service.image} 
+                    <motion.img
+                      src={service.image}
                       alt={service.title}
                       className="w-full h-full object-cover"
                       whileHover={{ scale: 1.1 }}
                       transition={{ duration: 0.6 }}
                     />
                     <div className="absolute top-4 right-4">
-                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                        service.availability === 'Immediate' 
-                          ? 'bg-green-500 text-white' 
+                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${service.availability === 'Immediate'
+                          ? 'bg-green-500 text-white'
                           : service.availability === 'Consultation Required'
-                          ? 'bg-orange-500 text-white'
-                          : 'bg-blue-600 text-white'
-                      }`}>
+                            ? 'bg-orange-500 text-white'
+                            : 'bg-blue-600 text-white'
+                        }`}>
                         {service.availability}
                       </span>
                     </div>
                   </div>
-                  
+
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
                     <div className="flex justify-between items-center text-sm text-gray-600 mb-4">
@@ -202,8 +203,8 @@ const Services = () => {
                       <span>{service.size}</span>
                     </div>
                     <p className="text-gray-700 mb-4 leading-relaxed">{service.description}</p>
-                    
-                    <motion.button 
+
+                    <motion.button
                       onClick={() => setSelectedService(service)}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -236,7 +237,7 @@ const Services = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              
+
               {/* Get Started Button */}
               <motion.div
                 className="flex-1 sm:max-w-[220px]"
@@ -287,12 +288,12 @@ const Services = () => {
               className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
             >
               <div className="relative">
-                <img 
-                  src={selectedService.image} 
+                <img
+                  src={selectedService.image}
                   alt={selectedService.title}
                   className="w-full h-64 object-cover"
                 />
-                <motion.button 
+                <motion.button
                   onClick={() => setSelectedService(null)}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
@@ -301,9 +302,9 @@ const Services = () => {
                   ×
                 </motion.button>
               </div>
-              
+
               <div className="p-6">
-                <motion.h3 
+                <motion.h3
                   className="text-2xl font-bold mb-4 text-gray-900"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -311,8 +312,8 @@ const Services = () => {
                 >
                   {selectedService.title}
                 </motion.h3>
-                
-                <motion.div 
+
+                <motion.div
                   className="grid grid-cols-2 gap-4 mb-6 text-sm"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -329,7 +330,7 @@ const Services = () => {
                   </div>
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                   className="mb-4 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -347,8 +348,8 @@ const Services = () => {
                     ))}
                   </div>
                 </motion.div>
-                
-                <motion.p 
+
+                <motion.p
                   className="text-gray-700 mb-6 leading-relaxed"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -358,7 +359,7 @@ const Services = () => {
                 </motion.p>
 
                 <Link to="/contact">
-                  <motion.button 
+                  <motion.button
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold w-full hover:bg-blue-700 transition-all duration-300"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}

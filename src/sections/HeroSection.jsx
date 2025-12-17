@@ -2,35 +2,37 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { 
-  Shield, 
-  Thermometer, 
-  Clock, 
+import {
+  Shield,
+  Thermometer,
+  Clock,
   Lock,
   CheckCircle,
-  Building
+  Building,
+  Package
 } from 'lucide-react';
 
 const lockerFeatures = [
   {
-    title: "Bank-Grade Security",
-    description: "Military-level protection with biometric access and 24/7 surveillance",
+    title: "Advanced Vault Security",
+    description: "High-level protection with biometric access and 24/7 monitoring",
     icon: Shield,
     image: "/images/security-system.jpg",
   },
   {
-    title: "Climate Controlled",
-    description: "Optimal temperature & humidity control for your valuables",
-    icon: Thermometer,
+    title: "Multiple Size Options",
+    description: "Private, easy-access lockers in various sizes to fit your needs",
+    icon: Package,
     image: "/images/locker-facility.jpg",
   },
   {
-    title: "24/7 Access",
-    description: "Access your locker anytime with extended hours",
-    icon: Clock,
+    title: "Hassle-Free Experience",
+    description: "A confidential and convenient experience for all customers",
+    icon: CheckCircle,
     image: "/images/interior.jpg",
   },
 ];
+
 
 const HeroSection = () => {
   const [currentFeature, setCurrentFeature] = useState(0);
@@ -50,7 +52,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4">
         {/* Only large screens get tall hero; mobile behaves naturally */}
         <div className="flex flex-col lg:flex-row items-center lg:items-center lg:min-h-[80vh] gap-6 lg:gap-12">
-          
+
           {/* LEFT CONTENT */}
           <div className="lg:w-1/2 text-center lg:text-left">
             <motion.div
@@ -66,8 +68,9 @@ const HeroSection = () => {
 
               {/* Subtitle */}
               <p className="text-sm sm:text-base md:text-lg text-blue-100 mb-6 max-w-2xl leading-relaxed mx-auto lg:mx-0">
-                Bank-level security meets modern convenience. Protect your valuables
-                with state-of-the-art locker facilities designed for your peace of mind.
+                From jewellery and documents to heirlooms and valuable assets, Anand Lockers
+                provides a secure and dependable environment designed for careful protection.
+
               </p>
 
               {/* CTA Buttons */}
@@ -158,11 +161,10 @@ const HeroSection = () => {
                       <button
                         key={index}
                         onClick={() => setCurrentFeature(index)}
-                        className={`w-2.5 h-2.5 rounded-full transition-all ${
-                          index === currentFeature
+                        className={`w-2.5 h-2.5 rounded-full transition-all ${index === currentFeature
                             ? "bg-orange-500 scale-110"
                             : "bg-white/30"
-                        }`}
+                          }`}
                       />
                     ))}
                   </div>

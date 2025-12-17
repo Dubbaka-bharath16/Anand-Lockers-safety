@@ -146,10 +146,9 @@ const Footer = () => {
                   </Link>
                 </div>
               </div>
-              <p className="text-white mb-4 text-sm sm:text-base leading-relaxed">
-                Bank-grade security solutions for your most precious belongings. 
-                No waiting lists, just immediate protection with unmatched convenience.
-              </p>
+             <p className="text-white mb-4 text-xs sm:text-sm leading-relaxed">
+    A secure, modern solution for your precious belongings. Reliable protection with advanced security and unmatched convenience.
+</p>
 
               <div className="social-links flex items-center space-x-3">
                 {[
