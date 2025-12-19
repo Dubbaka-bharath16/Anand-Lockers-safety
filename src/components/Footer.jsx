@@ -179,9 +179,9 @@ const Footer = () => {
               <ul className="">
                 {[
                   { path: "/", label: "Home" },
-                  // { path: "/about", label: "About" },
+                  { path: "/about", label: "About" },
                   { path: "/services", label: "Services" },
-                  { path: "/gallery", label: "Facilities" },
+                  // { path: "/gallery", label: "Facilities" },
                   { path: "/contact", label: "Contact" },
                 ].map((link) => (
                   <li key={link.path}>
