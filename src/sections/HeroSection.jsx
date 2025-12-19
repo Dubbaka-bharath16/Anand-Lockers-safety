@@ -75,7 +75,7 @@ const HeroSection = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 mb-8 justify-center lg:justify-start">
-                <Link to="/services">
+                <Link to="/contact">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -85,7 +85,7 @@ const HeroSection = () => {
                   </motion.button>
                 </Link>
 
-                <Link to="/gallery">
+                <Link to="/services">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
