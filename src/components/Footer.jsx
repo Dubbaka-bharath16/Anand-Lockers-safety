@@ -102,7 +102,7 @@ const Footer = () => {
           <p class="text-gray-700 text-base leading-relaxed">"Anand Lockers" and the company logo are registered trademarks. Unauthorized use is strictly prohibited.</p>
 
           <h3 class="font-bold text-amber-700 text-lg mt-6 mb-3">Copyright Infringement</h3>
-          <p class="text-gray-700 text-base leading-relaxed">If you believe your work has been copied in a way that constitutes copyright infringement, please contact us at <span class="text-amber-600 font-medium">legal@anandlockers.com</span> with detailed information.</p>
+          <p class="text-gray-700 text-base leading-relaxed">If you believe your work has been copied in a way that constitutes copyright infringement, please contact us at <span class="text-amber-600 font-medium">info@anandgroup.org</span> with detailed information.</p>
 
           <p class="text-gray-700 text-base leading-relaxed mt-6">© ${currentYear} Anand Lockers. All rights reserved.</p>
         </div>
@@ -116,39 +116,47 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           {/* Top grid: stacks on mobile */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 mb-8">
-          
+
             <div className="footer-about">
               <div className="flex items-center space-x-3 mb-3">
-                {/* Founder Logo */}
-                <div className="flex items-center sm:mr-0">
-                  <div className="h-14 w-14 rounded-full shadow-lg border-2 border-orange-300 overflow-hidden mr-3">
-                    <img
-                      src="./images/ceo.png"
-                      alt="Anand Lockers CEO"
-                      className="h-full w-full object-cover object-top transition-transform duration-300 hover:scale-110"
-                    />
-                  </div>
 
-                  {/* Company Logo */}
-                  <div className="h-13 w-10 overflow-hidden mr-3">
-                    <img
-                      src="./images/logo.png"
-                      alt="Anand Lockers Logo"
-                      className="h-full w-full object-contain"
-                    />
-                  </div>
-
-                  <Link to="/" className=" hover:opacity-90 transition-opacity duration-300">
-                    <div>
-                      <span className="sm:text-md lg:text-lg font-bold"><span className='text-amber-500'>ANAND</span> LOCKERS</span>
-                      <p className="text-gray-300 text-[10px] italic -mt-0.5">"Your Security, Our Priority"</p>
-                    </div>
-                  </Link>
+                {/* Founder Image (unchanged) */}
+                <div className="w-14 h-14 rounded-full border-2 border-orange-300 overflow-hidden shadow-lg flex-shrink-0">
+                  <img
+                    src="./images/ceo.png"
+                    alt="Anand Lockers CEO"
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
+
+                {/* Company Logo — CIRCULAR + SHARP */}
+                <div className="w-14 h-14 rounded-full border-2 border-orange-200 overflow-hidden flex items-center justify-center bg-white flex-shrink-0">
+                  <img
+                    src="./images/logo.png"
+                    alt="Anand Lockers Logo"
+                    className="w-[90%] h-[90%] object-contain"
+                    style={{ imageRendering: "auto" }}
+                  />
+                </div>
+
+                {/* Text */}
+                <Link to="/" className="hover:opacity-90 transition-opacity duration-300">
+                  <div className="leading-tight">
+                    <span className="text-base md:text-lg font-bold whitespace-nowrap">
+                      <span className="text-amber-500">ANAND</span>{" "}
+                      <span className="text-white">LOCKERS</span>
+                    </span>
+                    <p className="text-gray-300 text-[11px] italic">
+                      "Your Security, Our Priority"
+                    </p>
+                  </div>
+                </Link>
+
               </div>
-             <p className="text-white mb-4 text-xs sm:text-sm leading-relaxed">
-    A secure, modern solution for your precious belongings. Reliable protection with advanced security and unmatched convenience.
-</p>
+
+              <p className="text-white mb-4 text-xs sm:text-sm leading-relaxed">
+                A secure, modern solution for your precious belongings. Reliable protection with advanced security and unmatched convenience.
+              </p>
 
               <div className="social-links flex items-center space-x-3">
                 {[
@@ -181,7 +189,6 @@ const Footer = () => {
                   { path: "/", label: "Home" },
                   { path: "/about", label: "About" },
                   { path: "/services", label: "Services" },
-                  // { path: "/gallery", label: "Facilities" },
                   { path: "/contact", label: "Contact" },
                 ].map((link) => (
                   <li key={link.path}>
@@ -210,7 +217,6 @@ const Footer = () => {
                   { title: "Digital Storage" },
                 ].map((service) => (
                   <li key={service.title}>
-                    {/* ✅ Linked to /services (only change) */}
                     <Link to="/services">
                       <span className="text-white block py-1 transition-colors duration-200 hover:text-sunrise-gold">
                         <span className="font-medium">{service.title}</span>
@@ -221,7 +227,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Contact & Legal */}
+            {/* Contact - Removed Legal section from here */}
             <div className="footer-links">
               <h3 className="text-white text-lg sm:text-xl font-bold mb-4">
                 Connect
@@ -241,47 +247,52 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <i className="fas fa-envelope text-sunrise-gold" />
-                  <span className="text-gray-300">info@anandlockers.com</span>
-                </div>
-              </div>
-
-              <div className="legal-links">
-                <h4 className="text-white font-bold mb-3">Legal</h4>
-                <div className="flex flex-wrap gap-3 text-sm">
-                  <button
-                    onClick={() => openModal('privacy')}
-                    className="text-gray-400 no-underline transition-colors duration-200 hover:text-sunrise-gold cursor-pointer bg-transparent border-none"
-                  >
-                    Privacy Policy
-                  </button>
-                  <button
-                    onClick={() => openModal('terms')}
-                    className="text-gray-400 no-underline transition-colors duration-200 hover:text-sunrise-gold cursor-pointer bg-transparent border-none"
-                  >
-                    Terms
-                  </button>
-                  <button
-                    onClick={() => openModal('copyright')}
-                    className="text-gray-400 no-underline transition-colors duration-200 hover:text-sunrise-gold cursor-pointer bg-transparent border-none"
-                  >
-                    Copyright
-                  </button>
+                  <span className="text-gray-300">info@anandgroup.org</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Copyright & Developed by */}
+          {/* Copyright & Legal & Developed by */}
           <div className="copyright pt-3 border-t border-white border-opacity-10">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-2">
-              {/* Left Side */}
+            <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4">
+
+              {/* LEFT */}
               <p className="text-gray-400 text-sm text-center md:text-left">
-                &copy; {currentYear} Anand Lockers. All rights reserved.{" "}
+                &copy; {currentYear} Anand Lockers. All rights reserved.
               </p>
 
-              {/* Right Side - Developed By */}
-              <p className="text-gray-400 text-sm text-center md:text-right mr-6">
-                ©Designed by{" "}
+              {/* CENTER — LEGAL (PERFECT CENTER, FIXED) */}
+              <div className="flex justify-center items-center gap-4 text-sm">
+                <button
+                  onClick={() => openModal("privacy")}
+                  className="text-gray-400 hover:text-sunrise-gold transition-colors duration-200 bg-transparent border-none"
+                >
+                  Privacy Policy
+                </button>
+
+                <span className="text-gray-600">|</span>
+
+                <button
+                  onClick={() => openModal("terms")}
+                  className="text-gray-400 hover:text-sunrise-gold transition-colors duration-200 bg-transparent border-none"
+                >
+                  Terms
+                </button>
+
+                <span className="text-gray-600">|</span>
+
+                <button
+                  onClick={() => openModal("copyright")}
+                  className="text-gray-400 hover:text-sunrise-gold transition-colors duration-200 bg-transparent border-none"
+                >
+                  Copyright
+                </button>
+              </div>
+
+              {/* RIGHT */}
+              <p className="text-gray-400 text-sm text-center md:text-right">
+                Designed by{" "}
                 <a
                   href="https://designcareermetrics.com/"
                   target="_blank"
@@ -291,6 +302,7 @@ const Footer = () => {
                   Design Career Metrics
                 </a>
               </p>
+
             </div>
           </div>
         </div>
@@ -316,7 +328,7 @@ const Footer = () => {
 
             {/* Modal Content - Scrollable */}
             <div className="flex-1 p-6 overflow-y-auto border-t border-gray-100">
-              <div 
+              <div
                 dangerouslySetInnerHTML={{ __html: modalContent[activeModal].content }}
                 className="prose prose-sm max-w-none"
               />

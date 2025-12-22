@@ -54,7 +54,7 @@ const Contact = () => {
     {
       icon: "map-marker-alt",
       title: "Head Office",
-      content: "123 Security Lane, Mumbai, India 400053",
+      content: "H.No. 131/A, 2nd Floor, MLA Colony,Beside Vamsiram Banjara Abodes,Road No.12, Lane 14, Banjara Hills, Hyderabad.",
       link: "#",
     },
     {
@@ -66,8 +66,8 @@ const Contact = () => {
     {
       icon: "envelope",
       title: "Email",
-      content: "info@anandlockers.com",
-      link: "mailto:info@anandlockers.com",
+      content: "info@anandgroup.org",
+      link: "mailto:info@anandgroup.org",
     },
     {
       icon: "clock",
