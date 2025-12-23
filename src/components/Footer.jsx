@@ -121,23 +121,25 @@ const Footer = () => {
               <div className="flex items-center space-x-3 mb-3">
 
                 {/* Founder Image (unchanged) */}
-                <div className="w-14 h-14 rounded-full border-2 border-orange-300 overflow-hidden shadow-lg flex-shrink-0">
+                {/* <div className="w-14 h-14 rounded-full border-2 border-orange-300 overflow-hidden shadow-lg flex-shrink-0">
                   <img
                     src="./images/ceo.png"
                     alt="Anand Lockers CEO"
                     className="w-full h-full object-cover object-top"
                   />
-                </div>
+                </div> */}
 
                 {/* Company Logo — CIRCULAR + SHARP */}
-                <div className="w-14 h-14 rounded-full border-2 border-orange-200 overflow-hidden flex items-center justify-center bg-white flex-shrink-0">
-                  <img
-                    src="./images/logo.png"
-                    alt="Anand Lockers Logo"
-                    className="w-[90%] h-[90%] object-contain"
-                    style={{ imageRendering: "auto" }}
-                  />
-                </div>
+                <div className="w-14 h-14 rounded-full bg-white 
+                flex items-center justify-center 
+                overflow-hidden shadow-md flex-shrink-0">
+  <img
+    src="./images/logo.png"
+    alt="Anand Lockers Logo"
+    className="w-[80%] h-[80%] object-contain"
+  />
+</div>
+
 
                 {/* Text */}
                 <Link to="/" className="hover:opacity-90 transition-opacity duration-300">
@@ -147,7 +149,7 @@ const Footer = () => {
                       <span className="text-white">LOCKERS</span>
                     </span>
                     <p className="text-gray-300 text-[11px] italic">
-                      "Your Security, Our Priority"
+                      "Dharmo Rakshati Rakshitah"
                     </p>
                   </div>
                 </Link>
@@ -155,8 +157,10 @@ const Footer = () => {
               </div>
 
               <p className="text-white mb-4 text-xs sm:text-sm leading-relaxed">
-                A secure, modern solution for your precious belongings. Reliable protection with advanced security and unmatched convenience.
+                A secure, modern solution for your precious belongings. Reliable protection with advanced security and unmatched convenience,
+                backed by robust infrastructure and round-the-clock monitoring for complete peace of mind.
               </p>
+
 
               <div className="social-links flex items-center space-x-3">
                 {[
