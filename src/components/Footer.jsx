@@ -133,12 +133,12 @@ const Footer = () => {
                 <div className="w-14 h-14 rounded-full bg-white 
                 flex items-center justify-center 
                 overflow-hidden shadow-md flex-shrink-0">
-  <img
-    src="./images/logo.png"
-    alt="Anand Lockers Logo"
-    className="w-[80%] h-[80%] object-contain"
-  />
-</div>
+                  <img
+                    src="./images/logo.png"
+                    alt="Anand Lockers Logo"
+                    className="w-[80%] h-[80%] object-contain"
+                  />
+                </div>
 
 
                 {/* Text */}
@@ -165,7 +165,7 @@ const Footer = () => {
               <div className="social-links flex items-center space-x-3">
                 {[
                   { platform: "facebook-f", url: "#" },
-                  { platform: "twitter", url: "#" },
+                  { platform: "x-twitter", url: "#" },
                   { platform: "instagram", url: "#" },
                   { platform: "youtube", url: "#" },
                 ].map((social) => (
@@ -262,7 +262,7 @@ const Footer = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4">
 
               {/* LEFT */}
-              <p className="text-gray-400 text-sm text-center md:text-left">
+              <p className="text-white text-sm text-center md:text-left">
                 &copy; {currentYear} Anand Lockers. All rights reserved.
               </p>
 
@@ -270,7 +270,7 @@ const Footer = () => {
               <div className="flex justify-center items-center gap-4 text-sm">
                 <button
                   onClick={() => openModal("privacy")}
-                  className="text-gray-400 hover:text-sunrise-gold transition-colors duration-200 bg-transparent border-none"
+                  className="text-white hover:text-sunrise-gold transition-colors duration-200 bg-transparent border-none"
                 >
                   Privacy Policy
                 </button>
@@ -279,7 +279,7 @@ const Footer = () => {
 
                 <button
                   onClick={() => openModal("terms")}
-                  className="text-gray-400 hover:text-sunrise-gold transition-colors duration-200 bg-transparent border-none"
+                  className="text-white hover:text-sunrise-gold transition-colors duration-200 bg-transparent border-none"
                 >
                   Terms
                 </button>
@@ -288,14 +288,14 @@ const Footer = () => {
 
                 <button
                   onClick={() => openModal("copyright")}
-                  className="text-gray-400 hover:text-sunrise-gold transition-colors duration-200 bg-transparent border-none"
+                  className="text-white hover:text-sunrise-gold transition-colors duration-200 bg-transparent border-none"
                 >
                   Copyright
                 </button>
               </div>
 
               {/* RIGHT */}
-              <p className="text-gray-400 text-sm text-center md:text-right">
+              <p className="text-white text-sm text-center md:text-right">
                 Designed by{" "}
                 <a
                   href="https://designcareermetrics.com/"
