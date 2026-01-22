@@ -12,18 +12,19 @@ import Contact from './pages/Contact'
 function App() {
   return (
     <Router>
-      <div className="App">
+      {/* <div className="App">
         <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
-          {/* <Route path="/gallery" element={<Gallery />} /> */}
+          
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
-      </div>
+      </div> */}
+      Not Found
     </Router>
   )
 }
