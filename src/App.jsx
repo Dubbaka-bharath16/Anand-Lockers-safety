@@ -12,7 +12,7 @@ import Contact from './pages/Contact'
 function App() {
   return (
     <Router>
-      {/* <div className="App">
+      <div className="App">
         <ScrollToTop />
         <Header />
         <Routes>
@@ -23,8 +23,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
-      </div> */}
-      Not Found
+      </div>
+      {/* Not Found */}
     </Router>
   )
 }
